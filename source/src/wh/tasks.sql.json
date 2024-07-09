@@ -1,0 +1,5171 @@
+{
+  "kind": "parse",
+  "sql_stmt_list": {
+    "kind": "sql_stmt_list",
+    "sql_stmt_list_002": [
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_CUSTOMER_INCREMENTAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "WHEN": "WHEN",
+                "expr": {
+                  "kind": "expr",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "SYSTEM$STREAM_HAS_DATA"
+                    }
+                  },
+                  "expr_002_001": {
+                    "kind": "expr_002_001",
+                    "LEFT_PAREN": "(",
+                    "expr_002_001_001": {
+                      "kind": "expr_002_001_001",
+                      "expr_cmlst": {
+                        "kind": "expr_cmlst",
+                        "expr": {
+                          "kind": "expr",
+                          "constant": {
+                            "kind": "constant",
+                            "CHAR_STRING": "'TPCDI_STG.PUBLIC.CUSTOMER_STG_STM'"
+                          }
+                        }
+                      }
+                    },
+                    "RIGHT_PAREN": ")"
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_CUSTOMER_MASTER_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_DATE_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "WHEN": "WHEN",
+                "expr": {
+                  "kind": "expr",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "SYSTEM$STREAM_HAS_DATA"
+                    }
+                  },
+                  "expr_002_001": {
+                    "kind": "expr_002_001",
+                    "LEFT_PAREN": "(",
+                    "expr_002_001_001": {
+                      "kind": "expr_002_001_001",
+                      "expr_cmlst": {
+                        "kind": "expr_cmlst",
+                        "expr": {
+                          "kind": "expr",
+                          "constant": {
+                            "kind": "constant",
+                            "CHAR_STRING": "'TPCDI_STG.PUBLIC.DATE_STG_STM'"
+                          }
+                        }
+                      }
+                    },
+                    "RIGHT_PAREN": ")"
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_DATE_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_INDUSTRY_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "WHEN": "WHEN",
+                "expr": {
+                  "kind": "expr",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "SYSTEM$STREAM_HAS_DATA"
+                    }
+                  },
+                  "expr_002_001": {
+                    "kind": "expr_002_001",
+                    "LEFT_PAREN": "(",
+                    "expr_002_001_001": {
+                      "kind": "expr_002_001_001",
+                      "expr_cmlst": {
+                        "kind": "expr_cmlst",
+                        "expr": {
+                          "kind": "expr",
+                          "constant": {
+                            "kind": "constant",
+                            "CHAR_STRING": "'TPCDI_STG.PUBLIC.INDUSTRY_STG_STM'"
+                          }
+                        }
+                      }
+                    },
+                    "RIGHT_PAREN": ")"
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_INDUSTRY_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_REFERENCE_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_REFERENCE_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_STATUS_TYPE_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "WHEN": "WHEN",
+                "expr": {
+                  "kind": "expr",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "SYSTEM$STREAM_HAS_DATA"
+                    }
+                  },
+                  "expr_002_001": {
+                    "kind": "expr_002_001",
+                    "LEFT_PAREN": "(",
+                    "expr_002_001_001": {
+                      "kind": "expr_002_001_001",
+                      "expr_cmlst": {
+                        "kind": "expr_cmlst",
+                        "expr": {
+                          "kind": "expr",
+                          "constant": {
+                            "kind": "constant",
+                            "CHAR_STRING": "'TPCDI_STG.PUBLIC.STATUSTYPE_STG_STM'"
+                          }
+                        }
+                      }
+                    },
+                    "RIGHT_PAREN": ")"
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_STATUS_TYPE_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_TAX_RATE_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "WHEN": "WHEN",
+                "expr": {
+                  "kind": "expr",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "SYSTEM$STREAM_HAS_DATA"
+                    }
+                  },
+                  "expr_002_001": {
+                    "kind": "expr_002_001",
+                    "LEFT_PAREN": "(",
+                    "expr_002_001_001": {
+                      "kind": "expr_002_001_001",
+                      "expr_cmlst": {
+                        "kind": "expr_cmlst",
+                        "expr": {
+                          "kind": "expr",
+                          "constant": {
+                            "kind": "constant",
+                            "CHAR_STRING": "'TPCDI_STG.PUBLIC.TAXRATE_STG_STM'"
+                          }
+                        }
+                      }
+                    },
+                    "RIGHT_PAREN": ")"
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_TAX_RATE_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_TIME_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "WHEN": "WHEN",
+                "expr": {
+                  "kind": "expr",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "SYSTEM$STREAM_HAS_DATA"
+                    }
+                  },
+                  "expr_002_001": {
+                    "kind": "expr_002_001",
+                    "LEFT_PAREN": "(",
+                    "expr_002_001_001": {
+                      "kind": "expr_002_001_001",
+                      "expr_cmlst": {
+                        "kind": "expr_cmlst",
+                        "expr": {
+                          "kind": "expr",
+                          "constant": {
+                            "kind": "constant",
+                            "CHAR_STRING": "'TPCDI_STG.PUBLIC.TIME_STG_STM'"
+                          }
+                        }
+                      }
+                    },
+                    "RIGHT_PAREN": ")"
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_TIME_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_TRADE_TYPE_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "WHEN": "WHEN",
+                "expr": {
+                  "kind": "expr",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "SYSTEM$STREAM_HAS_DATA"
+                    }
+                  },
+                  "expr_002_001": {
+                    "kind": "expr_002_001",
+                    "LEFT_PAREN": "(",
+                    "expr_002_001_001": {
+                      "kind": "expr_002_001_001",
+                      "expr_cmlst": {
+                        "kind": "expr_cmlst",
+                        "expr": {
+                          "kind": "expr",
+                          "constant": {
+                            "kind": "constant",
+                            "CHAR_STRING": "'TPCDI_STG.PUBLIC.TRADETYPE_STG_STM'"
+                          }
+                        }
+                      }
+                    },
+                    "RIGHT_PAREN": ")"
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_TRADE_TYPE_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FACT_MARKET_HISTORY_INCREMENTAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "WHEN": "WHEN",
+                "expr": {
+                  "kind": "expr",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "SYSTEM$STREAM_HAS_DATA"
+                    }
+                  },
+                  "expr_002_001": {
+                    "kind": "expr_002_001",
+                    "LEFT_PAREN": "(",
+                    "expr_002_001_001": {
+                      "kind": "expr_002_001_001",
+                      "expr_cmlst": {
+                        "kind": "expr_cmlst",
+                        "expr": {
+                          "kind": "expr",
+                          "constant": {
+                            "kind": "constant",
+                            "CHAR_STRING": "'TPCDI_STG.PUBLIC.DAILYMARKET_STG_STM'"
+                          }
+                        }
+                      }
+                    },
+                    "RIGHT_PAREN": ")"
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "FACT_MARKET_HISTORY_INCREMENTAL_MASTER_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "CHECK_STREAM_CTRL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "WHEN": "WHEN",
+                "expr": {
+                  "kind": "expr",
+                  "expr": {
+                    "kind": "expr",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "SYSTEM$STREAM_HAS_DATA"
+                      }
+                    },
+                    "expr_002_001": {
+                      "kind": "expr_002_001",
+                      "LEFT_PAREN": "(",
+                      "expr_002_001_001": {
+                        "kind": "expr_002_001_001",
+                        "expr_cmlst": {
+                          "kind": "expr_cmlst",
+                          "expr": {
+                            "kind": "expr",
+                            "constant": {
+                              "kind": "constant",
+                              "CHAR_STRING": "'TPCDI_WH.PUBLIC.DIM_ACCOUNT_STM'"
+                            }
+                          }
+                        }
+                      },
+                      "RIGHT_PAREN": ")"
+                    }
+                  },
+                  "expr_003_001": {
+                    "kind": "expr_003_001",
+                    "AND": "AND"
+                  },
+                  "expr_1": {
+                    "kind": "expr",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "SYSTEM$STREAM_HAS_DATA"
+                      }
+                    },
+                    "expr_002_001": {
+                      "kind": "expr_002_001",
+                      "LEFT_PAREN": "(",
+                      "expr_002_001_001": {
+                        "kind": "expr_002_001_001",
+                        "expr_cmlst": {
+                          "kind": "expr_cmlst",
+                          "expr": {
+                            "kind": "expr",
+                            "constant": {
+                              "kind": "constant",
+                              "CHAR_STRING": "'TPCDI_WH.PUBLIC.DIM_SECURITY_STM'"
+                            }
+                          }
+                        }
+                      },
+                      "RIGHT_PAREN": ")"
+                    }
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "MAINTENANCE_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_TRADE_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_TRADE_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FACT_HOLDINGS_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_TRADE_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "FACT_HOLDINGS_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "INCREMENTAL_LOAD_1000_CTRL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "FACT_HOLDINGS_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_STG"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "START_LOAD_INCREMENTAL_TASKS_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "expr_cmlst": {
+                  "kind": "expr_cmlst",
+                  "expr": {
+                    "kind": "expr",
+                    "constant": {
+                      "kind": "constant",
+                      "signed_number": {
+                        "kind": "signed_number",
+                        "UNSIGNED_INTEGER": "1000"
+                      }
+                    }
+                  }
+                },
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "INCREMENTAL_DW_100_CTRL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "FACT_HOLDINGS_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "START_DW_INCREMENTAL_TASKS_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "INCREMENTAL_LOAD_100_CTRL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "INCREMENTAL_DW_100_CTRL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_STG"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "START_LOAD_INCREMENTAL_TASKS_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "expr_cmlst": {
+                  "kind": "expr_cmlst",
+                  "expr": {
+                    "kind": "expr",
+                    "constant": {
+                      "kind": "constant",
+                      "signed_number": {
+                        "kind": "signed_number",
+                        "UNSIGNED_INTEGER": "100"
+                      }
+                    }
+                  }
+                },
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "INCREMENTAL_DW_10_CTRL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "FACT_HOLDINGS_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "START_DW_INCREMENTAL_TASKS_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "INCREMENTAL_LOAD_10_CTRL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "INCREMENTAL_DW_10_CTRL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_STG"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "START_LOAD_INCREMENTAL_TASKS_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "expr_cmlst": {
+                  "kind": "expr_cmlst",
+                  "expr": {
+                    "kind": "expr",
+                    "constant": {
+                      "kind": "constant",
+                      "signed_number": {
+                        "kind": "signed_number",
+                        "UNSIGNED_INTEGER": "10"
+                      }
+                    }
+                  }
+                },
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "INCREMENTAL_DW_5_CTRL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "FACT_HOLDINGS_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "START_DW_INCREMENTAL_TASKS_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "INCREMENTAL_LOAD_5_CTRL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "INCREMENTAL_DW_5_CTRL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_STG"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "START_LOAD_INCREMENTAL_TASKS_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "expr_cmlst": {
+                  "kind": "expr_cmlst",
+                  "expr": {
+                    "kind": "expr",
+                    "constant": {
+                      "kind": "constant",
+                      "signed_number": {
+                        "kind": "signed_number",
+                        "UNSIGNED_INTEGER": "5"
+                      }
+                    }
+                  }
+                },
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_CUSTOMER_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_REFERENCE_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_CUSTOMER_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_ACCOUNT_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_CUSTOMER_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_ACCOUNT_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_ACCOUNT_INCREMENTAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_CUSTOMER_INCREMENTAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_ACCOUNT_MASTER_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_BROKER_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_REFERENCE_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_BROKER_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_COMPANY_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_REFERENCE_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_COMPANY_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_COMPANY_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_COMPANY_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_FINANCIAL_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_COMPANY_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_FINANCIAL_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_FINANCIAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_FINANCIAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_SECURITY_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_COMPANY_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_SECURITY_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_SECURITY_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_SECURITY_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_TRADE_INCREMENTAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_ACCOUNT_INCREMENTAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "DIM_TRADE_INCREMENTAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FACT_CASH_BALANCES_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_ACCOUNT_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "FACT_CASH_BALANCES_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FACT_CASH_BALANCES_INCREMENTAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_ACCOUNT_INCREMENTAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "FACT_CASH_BALANCES_INCREMENTAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FACT_HOLDINGS_INCREMENTAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_TRADE_INCREMENTAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "FACT_HOLDINGS_INCREMENTAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FACT_MARKET_HISTORY_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_SECURITY_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "FACT_MARKET_HISTORY_HISTORICAL_MASTER_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FACT_PROSPECT_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_ACCOUNT_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "FACT_PROSPECT_HISTORICAL_MASTER_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FACT_PROSPECT_INCREMENTAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_ACCOUNT_INCREMENTAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "FACT_PROSPECT_INCREMENTAL_MASTER_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FACT_WATCHES_HISTORICAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "FACT_WATCHES_HISTORICAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FACT_WATCHES_INCREMENTAL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_ACCOUNT_INCREMENTAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "FACT_WATCHES_INCREMENTAL_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "INCREMENTAL_DW_1000_CTRL_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "task_options",
+                "AFTER": "AFTER",
+                "task_options_011_001": {
+                  "kind": "task_options_011_001",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_WH"
+                    },
+                    "name_002": [
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "PUBLIC"
+                        }
+                      },
+                      {
+                        "kind": "name_001",
+                        "PERIOD": ".",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "FACT_HOLDINGS_HISTORICAL_TSK"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "START_DW_INCREMENTAL_TASKS_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_task": {
+            "kind": "create_or_replace_task",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TASK": "TASK",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "LOAD_SNAPSHOT_TSK"
+                  }
+                }
+              ]
+            },
+            "create_or_replace_task_002": [
+              {
+                "kind": "task_options",
+                "task_options_000_001": {
+                  "kind": "task_options_000_001",
+                  "WAREHOUSE": "WAREHOUSE"
+                },
+                "EQUALS_OP": "=",
+                "task_options_000_002": {
+                  "kind": "task_options_000_002",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TPCDI_GENERAL"
+                    }
+                  }
+                }
+              }
+            ],
+            "AS": "AS",
+            "sql_stmt": {
+              "kind": "sql_stmt",
+              "call_stmt": {
+                "kind": "call_stmt",
+                "CALL": "CALL",
+                "name": {
+                  "kind": "name",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TPCDI_WH"
+                  },
+                  "name_002": [
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PUBLIC"
+                      }
+                    },
+                    {
+                      "kind": "name_001",
+                      "PERIOD": ".",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "LOAD_SNAPSHOT_SP"
+                      }
+                    }
+                  ]
+                },
+                "LEFT_PAREN": "(",
+                "RIGHT_PAREN": ")"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      }
+    ]
+  },
+  "captures": [
+    {
+      "line": 1,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- Tasks that monitor data in TPCDI_STG",
+      "prev": "",
+      "nxt": "-- Tasks that monitor data in TPCDI_STG"
+    },
+    {
+      "line": 123,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- Tasks that utilize only TCPDI_WH data",
+      "prev": "",
+      "nxt": "-- Tasks that utilize only TCPDI_WH data"
+    }
+  ]
+}

@@ -1,0 +1,3715 @@
+{
+  "kind": "parse",
+  "sql_stmt_list": {
+    "kind": "sql_stmt_list",
+    "sql_stmt_list_002": [
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_view_stmt": {
+            "kind": "create_view_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "VIEW": "VIEW",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_FINANCIAL_ROLL_YEAR_EPS"
+                  }
+                }
+              ]
+            },
+            "AS": "AS",
+            "select_table_stmt": {
+              "kind": "select_table_stmt",
+              "select_expr": {
+                "kind": "select_expr",
+                "SELECT": "SELECT",
+                "select_expr_000_002": {
+                  "kind": "select_expr_000_002",
+                  "select_column": {
+                    "kind": "select_column",
+                    "expr": {
+                      "kind": "expr",
+                      "name": {
+                        "kind": "name",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "DIM_COMPANY"
+                        },
+                        "name_002": [
+                          {
+                            "kind": "name_001",
+                            "PERIOD": ".",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "SK_COMPANY_ID"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "select_expr_000_002_002": [
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "DIM_COMPANY"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "COMPANY_ID"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "DIM_FINANCIAL"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "FI_QTR_START_DATE"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "expr": {
+                            "kind": "expr",
+                            "expr": {
+                              "kind": "expr",
+                              "name": {
+                                "kind": "name",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "YEAR"
+                                }
+                              },
+                              "expr_002_001": {
+                                "kind": "expr_002_001",
+                                "LEFT_PAREN": "(",
+                                "expr_002_001_001": {
+                                  "kind": "expr_002_001_001",
+                                  "expr_cmlst": {
+                                    "kind": "expr_cmlst",
+                                    "expr": {
+                                      "kind": "expr",
+                                      "name": {
+                                        "kind": "name",
+                                        "var_name": {
+                                          "kind": "var_name",
+                                          "REGULAR_ID": "DIM_FINANCIAL"
+                                        },
+                                        "name_002": [
+                                          {
+                                            "kind": "name_001",
+                                            "PERIOD": ".",
+                                            "var_name": {
+                                              "kind": "var_name",
+                                              "REGULAR_ID": "FI_QTR_START_DATE"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                "RIGHT_PAREN": ")"
+                              }
+                            },
+                            "COLON": ":",
+                            "COLON_1": ":",
+                            "data_type": {
+                              "kind": "data_type",
+                              "string_binary": {
+                                "kind": "string_binary",
+                                "STRING": "STRING"
+                              }
+                            }
+                          },
+                          "expr_003_001": {
+                            "kind": "expr_003_001",
+                            "BAR": "|",
+                            "BAR_1": "|"
+                          },
+                          "expr_1": {
+                            "kind": "expr",
+                            "expr": {
+                              "kind": "expr",
+                              "name": {
+                                "kind": "name",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "QUARTER"
+                                }
+                              },
+                              "expr_002_001": {
+                                "kind": "expr_002_001",
+                                "LEFT_PAREN": "(",
+                                "expr_002_001_001": {
+                                  "kind": "expr_002_001_001",
+                                  "expr_cmlst": {
+                                    "kind": "expr_cmlst",
+                                    "expr": {
+                                      "kind": "expr",
+                                      "name": {
+                                        "kind": "name",
+                                        "var_name": {
+                                          "kind": "var_name",
+                                          "REGULAR_ID": "DIM_FINANCIAL"
+                                        },
+                                        "name_002": [
+                                          {
+                                            "kind": "name_001",
+                                            "PERIOD": ".",
+                                            "var_name": {
+                                              "kind": "var_name",
+                                              "REGULAR_ID": "FI_QTR_START_DATE"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                "RIGHT_PAREN": ")"
+                              }
+                            },
+                            "COLON": ":",
+                            "COLON_1": ":",
+                            "data_type": {
+                              "kind": "data_type",
+                              "string_binary": {
+                                "kind": "string_binary",
+                                "STRING": "STRING"
+                              }
+                            }
+                          }
+                        },
+                        "select_column_002": {
+                          "kind": "select_column_002",
+                          "AS": "AS",
+                          "select_column_002_001": {
+                            "kind": "select_column_002_001",
+                            "REGULAR_ID": "YEAR_QTR"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "DIM_FINANCIAL"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "FI_BASIC_EPS"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "aggregate_functions": {
+                            "kind": "aggregate_functions",
+                            "aggregate_functions_001": {
+                              "kind": "aggregate_functions_001",
+                              "SUM": "SUM"
+                            },
+                            "paren_col_lst": {
+                              "kind": "paren_col_lst",
+                              "LEFT_PAREN": "(",
+                              "colname_list": {
+                                "kind": "colname_list",
+                                "colname": {
+                                  "kind": "colname",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "DIM_FINANCIAL"
+                                      },
+                                      "name_002": [
+                                        {
+                                          "kind": "name_001",
+                                          "PERIOD": ".",
+                                          "var_name": {
+                                            "kind": "var_name",
+                                            "REGULAR_ID": "FI_BASIC_EPS"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              "RIGHT_PAREN": ")"
+                            },
+                            "over_clause": {
+                              "kind": "over_clause",
+                              "OVER": "OVER",
+                              "LEFT_PAREN": "(",
+                              "over_clause_001": {
+                                "kind": "over_clause_001",
+                                "PARTITION": "PARTITION",
+                                "BY": "BY",
+                                "expr_cmlst": {
+                                  "kind": "expr_cmlst",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "DIM_FINANCIAL"
+                                      },
+                                      "name_002": [
+                                        {
+                                          "kind": "name_001",
+                                          "PERIOD": ".",
+                                          "var_name": {
+                                            "kind": "var_name",
+                                            "REGULAR_ID": "SK_COMPANYID"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              "over_clause_002": {
+                                "kind": "over_clause_002",
+                                "ORDER": "ORDER",
+                                "BY": "BY",
+                                "order_by_elements_comma_list": {
+                                  "kind": "order_by_elements_comma_list",
+                                  "order_by_elements": {
+                                    "kind": "order_by_elements",
+                                    "expr": {
+                                      "kind": "expr",
+                                      "name": {
+                                        "kind": "name",
+                                        "var_name": {
+                                          "kind": "var_name",
+                                          "REGULAR_ID": "DIM_FINANCIAL"
+                                        },
+                                        "name_002": [
+                                          {
+                                            "kind": "name_001",
+                                            "PERIOD": ".",
+                                            "var_name": {
+                                              "kind": "var_name",
+                                              "REGULAR_ID": "FI_QTR_START_DATE"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "window_frame": {
+                                "kind": "window_frame",
+                                "window_frame_001": {
+                                  "kind": "window_frame_001",
+                                  "ROWS": "ROWS"
+                                },
+                                "BETWEEN": "BETWEEN",
+                                "window_frame_002": {
+                                  "kind": "window_frame_002",
+                                  "UNSIGNED_INTEGER": "3"
+                                },
+                                "window_frame_003": {
+                                  "kind": "window_frame_003",
+                                  "PRECEDING": "PRECEDING"
+                                },
+                                "AND": "AND",
+                                "window_frame_004": {
+                                  "kind": "window_frame_004",
+                                  "window_frame_004_002_001": {
+                                    "kind": "window_frame_004_002_001",
+                                    "CURRENT": "CURRENT",
+                                    "ROW": "ROW"
+                                  }
+                                }
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "select_column_002": {
+                          "kind": "select_column_002",
+                          "AS": "AS",
+                          "select_column_002_001": {
+                            "kind": "select_column_002_001",
+                            "REGULAR_ID": "ROLL_YEAR_EPS"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "select_expr_000_008": {
+                  "kind": "select_expr_000_008",
+                  "FROM": "FROM",
+                  "objectReference": {
+                    "kind": "objectReference",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "TPCDI_WH"
+                      },
+                      "name_002": [
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "PUBLIC"
+                          }
+                        },
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "DIM_FINANCIAL"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "select_expr_000_008_001": [
+                    {
+                      "kind": "joined_table_refs",
+                      "joined_table_refs_001": {
+                        "kind": "joined_table_refs_001",
+                        "INNER": "INNER"
+                      },
+                      "JOIN": "JOIN",
+                      "objectReference": {
+                        "kind": "objectReference",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "TPCDI_WH"
+                          },
+                          "name_002": [
+                            {
+                              "kind": "name_001",
+                              "PERIOD": ".",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "PUBLIC"
+                              }
+                            },
+                            {
+                              "kind": "name_001",
+                              "PERIOD": ".",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "DIM_COMPANY"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "joined_table_refs_002": {
+                        "kind": "joined_table_refs_002",
+                        "ON": "ON",
+                        "expr": {
+                          "kind": "expr",
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "DIM_FINANCIAL"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "SK_COMPANYID"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "expr_003_001": {
+                            "kind": "expr_003_001",
+                            "EQUALS_OP": "="
+                          },
+                          "expr_1": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "DIM_COMPANY"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "SK_COMPANY_ID"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_view_stmt": {
+            "kind": "create_view_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "VIEW": "VIEW",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_ACCOUNT_NOW"
+                  }
+                }
+              ]
+            },
+            "AS": "AS",
+            "select_table_stmt": {
+              "kind": "select_table_stmt",
+              "select_table_stmt_001": {
+                "kind": "select_table_stmt_001",
+                "WITH": "WITH",
+                "with_select_params": {
+                  "kind": "with_select_params",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "CURRENT_SK_IDS"
+                    }
+                  },
+                  "AS": "AS",
+                  "LEFT_PAREN": "(",
+                  "select_table_stmt": {
+                    "kind": "select_table_stmt",
+                    "select_expr": {
+                      "kind": "select_expr",
+                      "SELECT": "SELECT",
+                      "select_expr_000_002": {
+                        "kind": "select_expr_000_002",
+                        "select_column": {
+                          "kind": "select_column",
+                          "select_column_001": {
+                            "kind": "select_column_001",
+                            "DISTINCT": "DISTINCT"
+                          },
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "LAST_VALUE"
+                              }
+                            },
+                            "expr_002_001": {
+                              "kind": "expr_002_001",
+                              "LEFT_PAREN": "(",
+                              "expr_002_001_001": {
+                                "kind": "expr_002_001_001",
+                                "expr_cmlst": {
+                                  "kind": "expr_cmlst",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "SK_ACCOUNT_ID"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "RIGHT_PAREN": ")"
+                            },
+                            "over_clause": {
+                              "kind": "over_clause",
+                              "OVER": "OVER",
+                              "LEFT_PAREN": "(",
+                              "over_clause_001": {
+                                "kind": "over_clause_001",
+                                "PARTITION": "PARTITION",
+                                "BY": "BY",
+                                "expr_cmlst": {
+                                  "kind": "expr_cmlst",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "ACCOUNT_ID"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "over_clause_002": {
+                                "kind": "over_clause_002",
+                                "ORDER": "ORDER",
+                                "BY": "BY",
+                                "order_by_elements_comma_list": {
+                                  "kind": "order_by_elements_comma_list",
+                                  "order_by_elements": {
+                                    "kind": "order_by_elements",
+                                    "expr": {
+                                      "kind": "expr",
+                                      "name": {
+                                        "kind": "name",
+                                        "var_name": {
+                                          "kind": "var_name",
+                                          "REGULAR_ID": "SK_ACCOUNT_ID"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          },
+                          "select_column_002": {
+                            "kind": "select_column_002",
+                            "AS": "AS",
+                            "select_column_002_001": {
+                              "kind": "select_column_002_001",
+                              "REGULAR_ID": "SK_ACCOUNT_ID_LAST"
+                            }
+                          }
+                        }
+                      },
+                      "select_expr_000_008": {
+                        "kind": "select_expr_000_008",
+                        "FROM": "FROM",
+                        "objectReference": {
+                          "kind": "objectReference",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "TPCDI_WH"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "PUBLIC"
+                                }
+                              },
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "DIM_ACCOUNT"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "RIGHT_PAREN": ")"
+                }
+              },
+              "select_expr": {
+                "kind": "select_expr",
+                "SELECT": "SELECT",
+                "select_expr_000_002": {
+                  "kind": "select_expr_000_002",
+                  "select_column": {
+                    "kind": "select_column",
+                    "expr": {
+                      "kind": "expr",
+                      "name": {
+                        "kind": "name",
+                        "var_name": {
+                          "kind": "var_name",
+                          "keywords": {
+                            "kind": "keywords",
+                            "ASTERISK": "*"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "select_expr_000_008": {
+                  "kind": "select_expr_000_008",
+                  "FROM": "FROM",
+                  "objectReference": {
+                    "kind": "objectReference",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "TPCDI_WH"
+                      },
+                      "name_002": [
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "PUBLIC"
+                          }
+                        },
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "DIM_ACCOUNT"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "select_expr_000_008_001": [
+                    {
+                      "kind": "joined_table_refs",
+                      "joined_table_refs_001": {
+                        "kind": "joined_table_refs_001"
+                      },
+                      "JOIN": "JOIN",
+                      "objectReference": {
+                        "kind": "objectReference",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CURRENT_SK_IDS"
+                          }
+                        }
+                      },
+                      "joined_table_refs_002": {
+                        "kind": "joined_table_refs_002",
+                        "ON": "ON",
+                        "expr": {
+                          "kind": "expr",
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "CURRENT_SK_IDS"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "SK_ACCOUNT_ID_LAST"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "expr_003_001": {
+                            "kind": "expr_003_001",
+                            "EQUALS_OP": "="
+                          },
+                          "expr_1": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "DIM_ACCOUNT"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "SK_ACCOUNT_ID"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_view_stmt": {
+            "kind": "create_view_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "VIEW": "VIEW",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_COMPANY_NOW"
+                  }
+                }
+              ]
+            },
+            "AS": "AS",
+            "select_table_stmt": {
+              "kind": "select_table_stmt",
+              "select_table_stmt_001": {
+                "kind": "select_table_stmt_001",
+                "WITH": "WITH",
+                "with_select_params": {
+                  "kind": "with_select_params",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "CURRENT_SK_IDS"
+                    }
+                  },
+                  "AS": "AS",
+                  "LEFT_PAREN": "(",
+                  "select_table_stmt": {
+                    "kind": "select_table_stmt",
+                    "select_expr": {
+                      "kind": "select_expr",
+                      "SELECT": "SELECT",
+                      "select_expr_000_002": {
+                        "kind": "select_expr_000_002",
+                        "select_column": {
+                          "kind": "select_column",
+                          "select_column_001": {
+                            "kind": "select_column_001",
+                            "DISTINCT": "DISTINCT"
+                          },
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "LAST_VALUE"
+                              }
+                            },
+                            "expr_002_001": {
+                              "kind": "expr_002_001",
+                              "LEFT_PAREN": "(",
+                              "expr_002_001_001": {
+                                "kind": "expr_002_001_001",
+                                "expr_cmlst": {
+                                  "kind": "expr_cmlst",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "SK_COMPANY_ID"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "RIGHT_PAREN": ")"
+                            },
+                            "over_clause": {
+                              "kind": "over_clause",
+                              "OVER": "OVER",
+                              "LEFT_PAREN": "(",
+                              "over_clause_001": {
+                                "kind": "over_clause_001",
+                                "PARTITION": "PARTITION",
+                                "BY": "BY",
+                                "expr_cmlst": {
+                                  "kind": "expr_cmlst",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "COMPANY_ID"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "over_clause_002": {
+                                "kind": "over_clause_002",
+                                "ORDER": "ORDER",
+                                "BY": "BY",
+                                "order_by_elements_comma_list": {
+                                  "kind": "order_by_elements_comma_list",
+                                  "order_by_elements": {
+                                    "kind": "order_by_elements",
+                                    "expr": {
+                                      "kind": "expr",
+                                      "name": {
+                                        "kind": "name",
+                                        "var_name": {
+                                          "kind": "var_name",
+                                          "REGULAR_ID": "SK_COMPANY_ID"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          },
+                          "select_column_002": {
+                            "kind": "select_column_002",
+                            "AS": "AS",
+                            "select_column_002_001": {
+                              "kind": "select_column_002_001",
+                              "REGULAR_ID": "SK_COMPANY_ID_LAST"
+                            }
+                          }
+                        }
+                      },
+                      "select_expr_000_008": {
+                        "kind": "select_expr_000_008",
+                        "FROM": "FROM",
+                        "objectReference": {
+                          "kind": "objectReference",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "TPCDI_WH"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "PUBLIC"
+                                }
+                              },
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "DIM_COMPANY"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "RIGHT_PAREN": ")"
+                }
+              },
+              "select_expr": {
+                "kind": "select_expr",
+                "SELECT": "SELECT",
+                "select_expr_000_002": {
+                  "kind": "select_expr_000_002",
+                  "select_column": {
+                    "kind": "select_column",
+                    "expr": {
+                      "kind": "expr",
+                      "name": {
+                        "kind": "name",
+                        "var_name": {
+                          "kind": "var_name",
+                          "keywords": {
+                            "kind": "keywords",
+                            "ASTERISK": "*"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "select_expr_000_008": {
+                  "kind": "select_expr_000_008",
+                  "FROM": "FROM",
+                  "objectReference": {
+                    "kind": "objectReference",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "TPCDI_WH"
+                      },
+                      "name_002": [
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "PUBLIC"
+                          }
+                        },
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "DIM_COMPANY"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "select_expr_000_008_001": [
+                    {
+                      "kind": "joined_table_refs",
+                      "joined_table_refs_001": {
+                        "kind": "joined_table_refs_001"
+                      },
+                      "JOIN": "JOIN",
+                      "objectReference": {
+                        "kind": "objectReference",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CURRENT_SK_IDS"
+                          }
+                        }
+                      },
+                      "joined_table_refs_002": {
+                        "kind": "joined_table_refs_002",
+                        "ON": "ON",
+                        "expr": {
+                          "kind": "expr",
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "CURRENT_SK_IDS"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "SK_COMPANY_ID_LAST"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "expr_003_001": {
+                            "kind": "expr_003_001",
+                            "EQUALS_OP": "="
+                          },
+                          "expr_1": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "DIM_COMPANY"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "SK_COMPANY_ID"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_view_stmt": {
+            "kind": "create_view_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "VIEW": "VIEW",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_CUSTOMER_NOW"
+                  }
+                }
+              ]
+            },
+            "AS": "AS",
+            "select_table_stmt": {
+              "kind": "select_table_stmt",
+              "select_table_stmt_001": {
+                "kind": "select_table_stmt_001",
+                "WITH": "WITH",
+                "with_select_params": {
+                  "kind": "with_select_params",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "CURRENT_SK_IDS"
+                    }
+                  },
+                  "AS": "AS",
+                  "LEFT_PAREN": "(",
+                  "select_table_stmt": {
+                    "kind": "select_table_stmt",
+                    "select_expr": {
+                      "kind": "select_expr",
+                      "SELECT": "SELECT",
+                      "select_expr_000_002": {
+                        "kind": "select_expr_000_002",
+                        "select_column": {
+                          "kind": "select_column",
+                          "select_column_001": {
+                            "kind": "select_column_001",
+                            "DISTINCT": "DISTINCT"
+                          },
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "LAST_VALUE"
+                              }
+                            },
+                            "expr_002_001": {
+                              "kind": "expr_002_001",
+                              "LEFT_PAREN": "(",
+                              "expr_002_001_001": {
+                                "kind": "expr_002_001_001",
+                                "expr_cmlst": {
+                                  "kind": "expr_cmlst",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "SK_CUSTOMER_ID"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "RIGHT_PAREN": ")"
+                            },
+                            "over_clause": {
+                              "kind": "over_clause",
+                              "OVER": "OVER",
+                              "LEFT_PAREN": "(",
+                              "over_clause_001": {
+                                "kind": "over_clause_001",
+                                "PARTITION": "PARTITION",
+                                "BY": "BY",
+                                "expr_cmlst": {
+                                  "kind": "expr_cmlst",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "CUSTOMER_ID"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "over_clause_002": {
+                                "kind": "over_clause_002",
+                                "ORDER": "ORDER",
+                                "BY": "BY",
+                                "order_by_elements_comma_list": {
+                                  "kind": "order_by_elements_comma_list",
+                                  "order_by_elements": {
+                                    "kind": "order_by_elements",
+                                    "expr": {
+                                      "kind": "expr",
+                                      "name": {
+                                        "kind": "name",
+                                        "var_name": {
+                                          "kind": "var_name",
+                                          "REGULAR_ID": "SK_CUSTOMER_ID"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          },
+                          "select_column_002": {
+                            "kind": "select_column_002",
+                            "AS": "AS",
+                            "select_column_002_001": {
+                              "kind": "select_column_002_001",
+                              "REGULAR_ID": "SK_CUSTOMER_ID_LAST"
+                            }
+                          }
+                        }
+                      },
+                      "select_expr_000_008": {
+                        "kind": "select_expr_000_008",
+                        "FROM": "FROM",
+                        "objectReference": {
+                          "kind": "objectReference",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "TPCDI_WH"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "PUBLIC"
+                                }
+                              },
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "DIM_CUSTOMER"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "RIGHT_PAREN": ")"
+                }
+              },
+              "select_expr": {
+                "kind": "select_expr",
+                "SELECT": "SELECT",
+                "select_expr_000_002": {
+                  "kind": "select_expr_000_002",
+                  "select_column": {
+                    "kind": "select_column",
+                    "expr": {
+                      "kind": "expr",
+                      "name": {
+                        "kind": "name",
+                        "var_name": {
+                          "kind": "var_name",
+                          "keywords": {
+                            "kind": "keywords",
+                            "ASTERISK": "*"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "select_expr_000_008": {
+                  "kind": "select_expr_000_008",
+                  "FROM": "FROM",
+                  "objectReference": {
+                    "kind": "objectReference",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "TPCDI_WH"
+                      },
+                      "name_002": [
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "PUBLIC"
+                          }
+                        },
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "DIM_CUSTOMER"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "select_expr_000_008_001": [
+                    {
+                      "kind": "joined_table_refs",
+                      "joined_table_refs_001": {
+                        "kind": "joined_table_refs_001"
+                      },
+                      "JOIN": "JOIN",
+                      "objectReference": {
+                        "kind": "objectReference",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CURRENT_SK_IDS"
+                          }
+                        }
+                      },
+                      "joined_table_refs_002": {
+                        "kind": "joined_table_refs_002",
+                        "ON": "ON",
+                        "expr": {
+                          "kind": "expr",
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "CURRENT_SK_IDS"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "SK_CUSTOMER_ID_LAST"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "expr_003_001": {
+                            "kind": "expr_003_001",
+                            "EQUALS_OP": "="
+                          },
+                          "expr_1": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "DIM_CUSTOMER"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "SK_CUSTOMER_ID"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_view_stmt": {
+            "kind": "create_view_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "VIEW": "VIEW",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DIM_SECURITY_NOW"
+                  }
+                }
+              ]
+            },
+            "AS": "AS",
+            "select_table_stmt": {
+              "kind": "select_table_stmt",
+              "select_table_stmt_001": {
+                "kind": "select_table_stmt_001",
+                "WITH": "WITH",
+                "with_select_params": {
+                  "kind": "with_select_params",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "CURRENT_SK_IDS"
+                    }
+                  },
+                  "AS": "AS",
+                  "LEFT_PAREN": "(",
+                  "select_table_stmt": {
+                    "kind": "select_table_stmt",
+                    "select_expr": {
+                      "kind": "select_expr",
+                      "SELECT": "SELECT",
+                      "select_expr_000_002": {
+                        "kind": "select_expr_000_002",
+                        "select_column": {
+                          "kind": "select_column",
+                          "select_column_001": {
+                            "kind": "select_column_001",
+                            "DISTINCT": "DISTINCT"
+                          },
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "LAST_VALUE"
+                              }
+                            },
+                            "expr_002_001": {
+                              "kind": "expr_002_001",
+                              "LEFT_PAREN": "(",
+                              "expr_002_001_001": {
+                                "kind": "expr_002_001_001",
+                                "expr_cmlst": {
+                                  "kind": "expr_cmlst",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "SK_SECURITY_ID"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "RIGHT_PAREN": ")"
+                            },
+                            "over_clause": {
+                              "kind": "over_clause",
+                              "OVER": "OVER",
+                              "LEFT_PAREN": "(",
+                              "over_clause_001": {
+                                "kind": "over_clause_001",
+                                "PARTITION": "PARTITION",
+                                "BY": "BY",
+                                "expr_cmlst": {
+                                  "kind": "expr_cmlst",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "SYMBOL"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "over_clause_002": {
+                                "kind": "over_clause_002",
+                                "ORDER": "ORDER",
+                                "BY": "BY",
+                                "order_by_elements_comma_list": {
+                                  "kind": "order_by_elements_comma_list",
+                                  "order_by_elements": {
+                                    "kind": "order_by_elements",
+                                    "expr": {
+                                      "kind": "expr",
+                                      "name": {
+                                        "kind": "name",
+                                        "var_name": {
+                                          "kind": "var_name",
+                                          "REGULAR_ID": "SK_SECURITY_ID"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          },
+                          "select_column_002": {
+                            "kind": "select_column_002",
+                            "AS": "AS",
+                            "select_column_002_001": {
+                              "kind": "select_column_002_001",
+                              "REGULAR_ID": "SK_SECURITY_ID_LAST"
+                            }
+                          }
+                        }
+                      },
+                      "select_expr_000_008": {
+                        "kind": "select_expr_000_008",
+                        "FROM": "FROM",
+                        "objectReference": {
+                          "kind": "objectReference",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "TPCDI_WH"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "PUBLIC"
+                                }
+                              },
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "DIM_SECURITY"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "RIGHT_PAREN": ")"
+                }
+              },
+              "select_expr": {
+                "kind": "select_expr",
+                "SELECT": "SELECT",
+                "select_expr_000_002": {
+                  "kind": "select_expr_000_002",
+                  "select_column": {
+                    "kind": "select_column",
+                    "expr": {
+                      "kind": "expr",
+                      "name": {
+                        "kind": "name",
+                        "var_name": {
+                          "kind": "var_name",
+                          "keywords": {
+                            "kind": "keywords",
+                            "ASTERISK": "*"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "select_expr_000_008": {
+                  "kind": "select_expr_000_008",
+                  "FROM": "FROM",
+                  "objectReference": {
+                    "kind": "objectReference",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "TPCDI_WH"
+                      },
+                      "name_002": [
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "PUBLIC"
+                          }
+                        },
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "DIM_SECURITY"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "select_expr_000_008_001": [
+                    {
+                      "kind": "joined_table_refs",
+                      "joined_table_refs_001": {
+                        "kind": "joined_table_refs_001"
+                      },
+                      "JOIN": "JOIN",
+                      "objectReference": {
+                        "kind": "objectReference",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CURRENT_SK_IDS"
+                          }
+                        }
+                      },
+                      "joined_table_refs_002": {
+                        "kind": "joined_table_refs_002",
+                        "ON": "ON",
+                        "expr": {
+                          "kind": "expr",
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "CURRENT_SK_IDS"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "SK_SECURITY_ID_LAST"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "expr_003_001": {
+                            "kind": "expr_003_001",
+                            "EQUALS_OP": "="
+                          },
+                          "expr_1": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "DIM_SECURITY"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "SK_SECURITY_ID"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_view_stmt": {
+            "kind": "create_view_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "VIEW": "VIEW",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_WH"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TABLE_ROW_COUNTS"
+                  }
+                }
+              ]
+            },
+            "AS": "AS",
+            "select_table_stmt": {
+              "kind": "select_table_stmt",
+              "select_expr": {
+                "kind": "select_expr",
+                "SELECT": "SELECT",
+                "select_expr_000_002": {
+                  "kind": "select_expr_000_002",
+                  "select_column": {
+                    "kind": "select_column",
+                    "expr": {
+                      "kind": "expr",
+                      "name": {
+                        "kind": "name",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "TABLE_CATALOG"
+                        }
+                      }
+                    },
+                    "select_column_002": {
+                      "kind": "select_column_002",
+                      "AS": "AS",
+                      "select_column_002_001": {
+                        "kind": "select_column_002_001",
+                        "keywords": {
+                          "kind": "keywords",
+                          "DATABASE": "DATABASE"
+                        }
+                      }
+                    }
+                  },
+                  "select_expr_000_002_002": [
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "TABLE_NAME"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "ROW_COUNT"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "select_expr_000_008": {
+                  "kind": "select_expr_000_008",
+                  "FROM": "FROM",
+                  "objectReference": {
+                    "kind": "objectReference",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "TPCDI_WH"
+                      },
+                      "name_002": [
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "INFORMATION_SCHEMA"
+                          }
+                        },
+                        {
+                          "kind": "name_001",
+                          "PERIOD": ".",
+                          "var_name": {
+                            "kind": "var_name",
+                            "keywords": {
+                              "kind": "keywords",
+                              "TABLES": "TABLES"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "select_expr_000_008_004": {
+                    "kind": "select_expr_000_008_004",
+                    "WHERE": "WHERE",
+                    "expr": {
+                      "kind": "expr",
+                      "expr": {
+                        "kind": "expr",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "TABLE_SCHEMA"
+                          }
+                        }
+                      },
+                      "expr_003_001": {
+                        "kind": "expr_003_001",
+                        "EQUALS_OP": "="
+                      },
+                      "expr_1": {
+                        "kind": "expr",
+                        "constant": {
+                          "kind": "constant",
+                          "CHAR_STRING": "'PUBLIC'"
+                        }
+                      }
+                    }
+                  }
+                },
+                "select_expr_000_010": [
+                  {
+                    "kind": "select_expr_000_009",
+                    "UNION": "UNION",
+                    "select_table_stmt": {
+                      "kind": "select_table_stmt",
+                      "select_expr": {
+                        "kind": "select_expr",
+                        "SELECT": "SELECT",
+                        "select_expr_000_002": {
+                          "kind": "select_expr_000_002",
+                          "select_column": {
+                            "kind": "select_column",
+                            "expr": {
+                              "kind": "expr",
+                              "name": {
+                                "kind": "name",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "TABLE_CATALOG"
+                                }
+                              }
+                            },
+                            "select_column_002": {
+                              "kind": "select_column_002",
+                              "AS": "AS",
+                              "select_column_002_001": {
+                                "kind": "select_column_002_001",
+                                "keywords": {
+                                  "kind": "keywords",
+                                  "DATABASE": "DATABASE"
+                                }
+                              }
+                            }
+                          },
+                          "select_expr_000_002_002": [
+                            {
+                              "kind": "select_expr_000_002_001",
+                              "COMMA": ",",
+                              "select_column": {
+                                "kind": "select_column",
+                                "expr": {
+                                  "kind": "expr",
+                                  "name": {
+                                    "kind": "name",
+                                    "var_name": {
+                                      "kind": "var_name",
+                                      "REGULAR_ID": "TABLE_NAME"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "kind": "select_expr_000_002_001",
+                              "COMMA": ",",
+                              "select_column": {
+                                "kind": "select_column",
+                                "expr": {
+                                  "kind": "expr",
+                                  "name": {
+                                    "kind": "name",
+                                    "var_name": {
+                                      "kind": "var_name",
+                                      "REGULAR_ID": "ROW_COUNT"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "select_expr_000_008": {
+                          "kind": "select_expr_000_008",
+                          "FROM": "FROM",
+                          "objectReference": {
+                            "kind": "objectReference",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "TPCDI_ODS"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "INFORMATION_SCHEMA"
+                                  }
+                                },
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "keywords": {
+                                      "kind": "keywords",
+                                      "TABLES": "TABLES"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "select_expr_000_008_004": {
+                            "kind": "select_expr_000_008_004",
+                            "WHERE": "WHERE",
+                            "expr": {
+                              "kind": "expr",
+                              "expr": {
+                                "kind": "expr",
+                                "name": {
+                                  "kind": "name",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "TABLE_SCHEMA"
+                                  }
+                                }
+                              },
+                              "expr_003_001": {
+                                "kind": "expr_003_001",
+                                "EQUALS_OP": "="
+                              },
+                              "expr_1": {
+                                "kind": "expr",
+                                "constant": {
+                                  "kind": "constant",
+                                  "CHAR_STRING": "'PUBLIC'"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "select_expr_000_010": [
+                          {
+                            "kind": "select_expr_000_009",
+                            "UNION": "UNION",
+                            "select_table_stmt": {
+                              "kind": "select_table_stmt",
+                              "select_expr": {
+                                "kind": "select_expr",
+                                "SELECT": "SELECT",
+                                "select_expr_000_002": {
+                                  "kind": "select_expr_000_002",
+                                  "select_column": {
+                                    "kind": "select_column",
+                                    "expr": {
+                                      "kind": "expr",
+                                      "name": {
+                                        "kind": "name",
+                                        "var_name": {
+                                          "kind": "var_name",
+                                          "REGULAR_ID": "TABLE_CATALOG"
+                                        }
+                                      }
+                                    },
+                                    "select_column_002": {
+                                      "kind": "select_column_002",
+                                      "AS": "AS",
+                                      "select_column_002_001": {
+                                        "kind": "select_column_002_001",
+                                        "keywords": {
+                                          "kind": "keywords",
+                                          "DATABASE": "DATABASE"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "select_expr_000_002_002": [
+                                    {
+                                      "kind": "select_expr_000_002_001",
+                                      "COMMA": ",",
+                                      "select_column": {
+                                        "kind": "select_column",
+                                        "expr": {
+                                          "kind": "expr",
+                                          "name": {
+                                            "kind": "name",
+                                            "var_name": {
+                                              "kind": "var_name",
+                                              "REGULAR_ID": "TABLE_NAME"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "kind": "select_expr_000_002_001",
+                                      "COMMA": ",",
+                                      "select_column": {
+                                        "kind": "select_column",
+                                        "expr": {
+                                          "kind": "expr",
+                                          "name": {
+                                            "kind": "name",
+                                            "var_name": {
+                                              "kind": "var_name",
+                                              "REGULAR_ID": "ROW_COUNT"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "select_expr_000_008": {
+                                  "kind": "select_expr_000_008",
+                                  "FROM": "FROM",
+                                  "objectReference": {
+                                    "kind": "objectReference",
+                                    "name": {
+                                      "kind": "name",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "TPCDI_STG"
+                                      },
+                                      "name_002": [
+                                        {
+                                          "kind": "name_001",
+                                          "PERIOD": ".",
+                                          "var_name": {
+                                            "kind": "var_name",
+                                            "REGULAR_ID": "INFORMATION_SCHEMA"
+                                          }
+                                        },
+                                        {
+                                          "kind": "name_001",
+                                          "PERIOD": ".",
+                                          "var_name": {
+                                            "kind": "var_name",
+                                            "keywords": {
+                                              "kind": "keywords",
+                                              "TABLES": "TABLES"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "select_expr_000_008_004": {
+                                    "kind": "select_expr_000_008_004",
+                                    "WHERE": "WHERE",
+                                    "expr": {
+                                      "kind": "expr",
+                                      "expr": {
+                                        "kind": "expr",
+                                        "name": {
+                                          "kind": "name",
+                                          "var_name": {
+                                            "kind": "var_name",
+                                            "REGULAR_ID": "TABLE_SCHEMA"
+                                          }
+                                        }
+                                      },
+                                      "expr_003_001": {
+                                        "kind": "expr_003_001",
+                                        "EQUALS_OP": "="
+                                      },
+                                      "expr_1": {
+                                        "kind": "expr",
+                                        "constant": {
+                                          "kind": "constant",
+                                          "CHAR_STRING": "'PUBLIC'"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_view_stmt": {
+            "kind": "create_view_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "VIEW": "VIEW",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_STG"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "DAILY_MARKET_HIGH_LOW_STG"
+                  }
+                }
+              ]
+            },
+            "AS": "AS",
+            "select_table_stmt": {
+              "kind": "select_table_stmt",
+              "select_table_stmt_001": {
+                "kind": "select_table_stmt_001",
+                "WITH": "WITH",
+                "with_select_params": {
+                  "kind": "with_select_params",
+                  "name": {
+                    "kind": "name",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "GET_HIGHS_LOWS"
+                    }
+                  },
+                  "AS": "AS",
+                  "LEFT_PAREN": "(",
+                  "select_table_stmt": {
+                    "kind": "select_table_stmt",
+                    "select_expr": {
+                      "kind": "select_expr",
+                      "SELECT": "SELECT",
+                      "select_expr_000_002": {
+                        "kind": "select_expr_000_002",
+                        "select_column": {
+                          "kind": "select_column",
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "DM_S_SYMB"
+                              }
+                            }
+                          },
+                          "select_column_002": {
+                            "kind": "select_column_002",
+                            "select_column_002_001": {
+                              "kind": "select_column_002_001",
+                              "REGULAR_ID": "SYMBOL"
+                            }
+                          }
+                        },
+                        "select_expr_000_002_002": [
+                          {
+                            "kind": "select_expr_000_002_001",
+                            "COMMA": ",",
+                            "select_column": {
+                              "kind": "select_column",
+                              "expr": {
+                                "kind": "expr",
+                                "name": {
+                                  "kind": "name",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "DIM_DATE"
+                                  },
+                                  "name_002": [
+                                    {
+                                      "kind": "name_001",
+                                      "PERIOD": ".",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "DATE_ID"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              "select_column_002": {
+                                "kind": "select_column_002",
+                                "select_column_002_001": {
+                                  "kind": "select_column_002_001",
+                                  "keywords": {
+                                    "kind": "keywords",
+                                    "DATE": "DATE"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "kind": "select_expr_000_002_001",
+                            "COMMA": ",",
+                            "select_column": {
+                              "kind": "select_column",
+                              "expr": {
+                                "kind": "expr",
+                                "name": {
+                                  "kind": "name",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "DM_HIGH"
+                                  }
+                                }
+                              },
+                              "select_column_002": {
+                                "kind": "select_column_002",
+                                "select_column_002_001": {
+                                  "kind": "select_column_002_001",
+                                  "REGULAR_ID": "DAY_HIGH"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "kind": "select_expr_000_002_001",
+                            "COMMA": ",",
+                            "select_column": {
+                              "kind": "select_column",
+                              "expr": {
+                                "kind": "expr",
+                                "name": {
+                                  "kind": "name",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "DM_LOW"
+                                  }
+                                }
+                              },
+                              "select_column_002": {
+                                "kind": "select_column_002",
+                                "select_column_002_001": {
+                                  "kind": "select_column_002_001",
+                                  "REGULAR_ID": "DAY_LOW"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "kind": "select_expr_000_002_001",
+                            "COMMA": ",",
+                            "select_column": {
+                              "kind": "select_column",
+                              "expr": {
+                                "kind": "expr",
+                                "aggregate_functions": {
+                                  "kind": "aggregate_functions",
+                                  "aggregate_functions_001": {
+                                    "kind": "aggregate_functions_001",
+                                    "MAX": "MAX"
+                                  },
+                                  "paren_col_lst": {
+                                    "kind": "paren_col_lst",
+                                    "LEFT_PAREN": "(",
+                                    "colname_list": {
+                                      "kind": "colname_list",
+                                      "colname": {
+                                        "kind": "colname",
+                                        "expr": {
+                                          "kind": "expr",
+                                          "name": {
+                                            "kind": "name",
+                                            "var_name": {
+                                              "kind": "var_name",
+                                              "REGULAR_ID": "DM_HIGH"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "RIGHT_PAREN": ")"
+                                  },
+                                  "over_clause": {
+                                    "kind": "over_clause",
+                                    "OVER": "OVER",
+                                    "LEFT_PAREN": "(",
+                                    "over_clause_001": {
+                                      "kind": "over_clause_001",
+                                      "PARTITION": "PARTITION",
+                                      "BY": "BY",
+                                      "expr_cmlst": {
+                                        "kind": "expr_cmlst",
+                                        "expr": {
+                                          "kind": "expr",
+                                          "name": {
+                                            "kind": "name",
+                                            "var_name": {
+                                              "kind": "var_name",
+                                              "REGULAR_ID": "DM_S_SYMB"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "over_clause_002": {
+                                      "kind": "over_clause_002",
+                                      "ORDER": "ORDER",
+                                      "BY": "BY",
+                                      "order_by_elements_comma_list": {
+                                        "kind": "order_by_elements_comma_list",
+                                        "order_by_elements": {
+                                          "kind": "order_by_elements",
+                                          "expr": {
+                                            "kind": "expr",
+                                            "name": {
+                                              "kind": "name",
+                                              "var_name": {
+                                                "kind": "var_name",
+                                                "REGULAR_ID": "DM_DATE"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "window_frame": {
+                                      "kind": "window_frame",
+                                      "window_frame_001": {
+                                        "kind": "window_frame_001",
+                                        "ROWS": "ROWS"
+                                      },
+                                      "BETWEEN": "BETWEEN",
+                                      "window_frame_002": {
+                                        "kind": "window_frame_002",
+                                        "UNSIGNED_INTEGER": "364"
+                                      },
+                                      "window_frame_003": {
+                                        "kind": "window_frame_003",
+                                        "PRECEDING": "PRECEDING"
+                                      },
+                                      "AND": "AND",
+                                      "window_frame_004": {
+                                        "kind": "window_frame_004",
+                                        "window_frame_004_002_001": {
+                                          "kind": "window_frame_004_002_001",
+                                          "CURRENT": "CURRENT",
+                                          "ROW": "ROW"
+                                        }
+                                      }
+                                    },
+                                    "RIGHT_PAREN": ")"
+                                  }
+                                }
+                              },
+                              "select_column_002": {
+                                "kind": "select_column_002",
+                                "AS": "AS",
+                                "select_column_002_001": {
+                                  "kind": "select_column_002_001",
+                                  "REGULAR_ID": "YEAR_HIGH"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "kind": "select_expr_000_002_001",
+                            "COMMA": ",",
+                            "select_column": {
+                              "kind": "select_column",
+                              "expr": {
+                                "kind": "expr",
+                                "aggregate_functions": {
+                                  "kind": "aggregate_functions",
+                                  "aggregate_functions_001": {
+                                    "kind": "aggregate_functions_001",
+                                    "MIN": "MIN"
+                                  },
+                                  "paren_col_lst": {
+                                    "kind": "paren_col_lst",
+                                    "LEFT_PAREN": "(",
+                                    "colname_list": {
+                                      "kind": "colname_list",
+                                      "colname": {
+                                        "kind": "colname",
+                                        "expr": {
+                                          "kind": "expr",
+                                          "name": {
+                                            "kind": "name",
+                                            "var_name": {
+                                              "kind": "var_name",
+                                              "REGULAR_ID": "DM_LOW"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "RIGHT_PAREN": ")"
+                                  },
+                                  "over_clause": {
+                                    "kind": "over_clause",
+                                    "OVER": "OVER",
+                                    "LEFT_PAREN": "(",
+                                    "over_clause_001": {
+                                      "kind": "over_clause_001",
+                                      "PARTITION": "PARTITION",
+                                      "BY": "BY",
+                                      "expr_cmlst": {
+                                        "kind": "expr_cmlst",
+                                        "expr": {
+                                          "kind": "expr",
+                                          "name": {
+                                            "kind": "name",
+                                            "var_name": {
+                                              "kind": "var_name",
+                                              "REGULAR_ID": "DM_S_SYMB"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "over_clause_002": {
+                                      "kind": "over_clause_002",
+                                      "ORDER": "ORDER",
+                                      "BY": "BY",
+                                      "order_by_elements_comma_list": {
+                                        "kind": "order_by_elements_comma_list",
+                                        "order_by_elements": {
+                                          "kind": "order_by_elements",
+                                          "expr": {
+                                            "kind": "expr",
+                                            "name": {
+                                              "kind": "name",
+                                              "var_name": {
+                                                "kind": "var_name",
+                                                "REGULAR_ID": "DM_DATE"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "window_frame": {
+                                      "kind": "window_frame",
+                                      "window_frame_001": {
+                                        "kind": "window_frame_001",
+                                        "ROWS": "ROWS"
+                                      },
+                                      "BETWEEN": "BETWEEN",
+                                      "window_frame_002": {
+                                        "kind": "window_frame_002",
+                                        "UNSIGNED_INTEGER": "364"
+                                      },
+                                      "window_frame_003": {
+                                        "kind": "window_frame_003",
+                                        "PRECEDING": "PRECEDING"
+                                      },
+                                      "AND": "AND",
+                                      "window_frame_004": {
+                                        "kind": "window_frame_004",
+                                        "window_frame_004_002_001": {
+                                          "kind": "window_frame_004_002_001",
+                                          "CURRENT": "CURRENT",
+                                          "ROW": "ROW"
+                                        }
+                                      }
+                                    },
+                                    "RIGHT_PAREN": ")"
+                                  }
+                                }
+                              },
+                              "select_column_002": {
+                                "kind": "select_column_002",
+                                "AS": "AS",
+                                "select_column_002_001": {
+                                  "kind": "select_column_002_001",
+                                  "REGULAR_ID": "YEAR_LOW"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "select_expr_000_008": {
+                        "kind": "select_expr_000_008",
+                        "FROM": "FROM",
+                        "objectReference": {
+                          "kind": "objectReference",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "TPCDI_STG"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "PUBLIC"
+                                }
+                              },
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "DAILYMARKET_STG"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "select_expr_000_008_001": [
+                          {
+                            "kind": "joined_table_refs",
+                            "joined_table_refs_001": {
+                              "kind": "joined_table_refs_001",
+                              "INNER": "INNER"
+                            },
+                            "JOIN": "JOIN",
+                            "objectReference": {
+                              "kind": "objectReference",
+                              "name": {
+                                "kind": "name",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "TPCDI_WH"
+                                },
+                                "name_002": [
+                                  {
+                                    "kind": "name_001",
+                                    "PERIOD": ".",
+                                    "var_name": {
+                                      "kind": "var_name",
+                                      "REGULAR_ID": "PUBLIC"
+                                    }
+                                  },
+                                  {
+                                    "kind": "name_001",
+                                    "PERIOD": ".",
+                                    "var_name": {
+                                      "kind": "var_name",
+                                      "REGULAR_ID": "DIM_DATE"
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            "joined_table_refs_002": {
+                              "kind": "joined_table_refs_002",
+                              "ON": "ON",
+                              "expr": {
+                                "kind": "expr",
+                                "expr": {
+                                  "kind": "expr",
+                                  "name": {
+                                    "kind": "name",
+                                    "var_name": {
+                                      "kind": "var_name",
+                                      "REGULAR_ID": "DAILYMARKET_STG"
+                                    },
+                                    "name_002": [
+                                      {
+                                        "kind": "name_001",
+                                        "PERIOD": ".",
+                                        "var_name": {
+                                          "kind": "var_name",
+                                          "REGULAR_ID": "DM_DATE"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "expr_003_001": {
+                                  "kind": "expr_003_001",
+                                  "EQUALS_OP": "="
+                                },
+                                "expr_1": {
+                                  "kind": "expr",
+                                  "name": {
+                                    "kind": "name",
+                                    "var_name": {
+                                      "kind": "var_name",
+                                      "REGULAR_ID": "DIM_DATE"
+                                    },
+                                    "name_002": [
+                                      {
+                                        "kind": "name_001",
+                                        "PERIOD": ".",
+                                        "var_name": {
+                                          "kind": "var_name",
+                                          "REGULAR_ID": "DATE_VALUE"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ],
+                        "select_expr_000_008_008": {
+                          "kind": "select_expr_000_008_008",
+                          "ORDER": "ORDER",
+                          "BY": "BY",
+                          "order_by_elements_comma_list": {
+                            "kind": "order_by_elements_comma_list",
+                            "order_by_elements": {
+                              "kind": "order_by_elements",
+                              "expr": {
+                                "kind": "expr",
+                                "constant": {
+                                  "kind": "constant",
+                                  "signed_number": {
+                                    "kind": "signed_number",
+                                    "UNSIGNED_INTEGER": "1"
+                                  }
+                                }
+                              }
+                            },
+                            "order_by_elements_comma_list_002": [
+                              {
+                                "kind": "order_by_elements_comma_list_001",
+                                "COMMA": ",",
+                                "order_by_elements": {
+                                  "kind": "order_by_elements",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "constant": {
+                                      "kind": "constant",
+                                      "signed_number": {
+                                        "kind": "signed_number",
+                                        "UNSIGNED_INTEGER": "2"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "RIGHT_PAREN": ")"
+                }
+              },
+              "select_expr": {
+                "kind": "select_expr",
+                "SELECT": "SELECT",
+                "select_expr_000_002": {
+                  "kind": "select_expr_000_002",
+                  "select_column": {
+                    "kind": "select_column",
+                    "expr": {
+                      "kind": "expr",
+                      "name": {
+                        "kind": "name",
+                        "var_name": {
+                          "kind": "var_name",
+                          "REGULAR_ID": "GET_HIGHS_LOWS"
+                        },
+                        "name_002": [
+                          {
+                            "kind": "name_001",
+                            "PERIOD": ".",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "SYMBOL"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "select_expr_000_002_002": [
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "GET_HIGHS_LOWS"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "keywords": {
+                                    "kind": "keywords",
+                                    "DATE": "DATE"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "GET_HIGHS_LOWS"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "DAY_HIGH"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "GET_HIGHS_LOWS"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "YEAR_HIGH"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "expr": {
+                            "kind": "expr",
+                            "REPLACE": "REPLACE",
+                            "LEFT_PAREN": "(",
+                            "expr_cmlst": {
+                              "kind": "expr_cmlst",
+                              "expr": {
+                                "kind": "expr",
+                                "expr": {
+                                  "kind": "expr",
+                                  "aggregate_functions": {
+                                    "kind": "aggregate_functions",
+                                    "aggregate_functions_001": {
+                                      "kind": "aggregate_functions_001",
+                                      "MIN": "MIN"
+                                    },
+                                    "paren_col_lst": {
+                                      "kind": "paren_col_lst",
+                                      "LEFT_PAREN": "(",
+                                      "colname_list": {
+                                        "kind": "colname_list",
+                                        "colname": {
+                                          "kind": "colname",
+                                          "expr": {
+                                            "kind": "expr",
+                                            "name": {
+                                              "kind": "name",
+                                              "var_name": {
+                                                "kind": "var_name",
+                                                "REGULAR_ID": "HIGH"
+                                              },
+                                              "name_002": [
+                                                {
+                                                  "kind": "name_001",
+                                                  "PERIOD": ".",
+                                                  "var_name": {
+                                                    "kind": "var_name",
+                                                    "REGULAR_ID": "DM_DATE"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "RIGHT_PAREN": ")"
+                                    }
+                                  }
+                                },
+                                "COLON": ":",
+                                "COLON_1": ":",
+                                "data_type": {
+                                  "kind": "data_type",
+                                  "string_binary": {
+                                    "kind": "string_binary",
+                                    "STRING": "STRING"
+                                  }
+                                }
+                              },
+                              "expr_cmlst_002": [
+                                {
+                                  "kind": "expr_cmlst_001",
+                                  "COMMA": ",",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "constant": {
+                                      "kind": "constant",
+                                      "CHAR_STRING": "'-'"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "RIGHT_PAREN": ")"
+                          },
+                          "COLON": ":",
+                          "COLON_1": ":",
+                          "data_type": {
+                            "kind": "data_type",
+                            "numeric": {
+                              "kind": "numeric",
+                              "NUMBER": "NUMBER"
+                            }
+                          }
+                        },
+                        "select_column_002": {
+                          "kind": "select_column_002",
+                          "AS": "AS",
+                          "select_column_002_001": {
+                            "kind": "select_column_002_001",
+                            "REGULAR_ID": "EARLIEST_HIGH_DATE"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "GET_HIGHS_LOWS"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "DAY_LOW"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "name": {
+                            "kind": "name",
+                            "var_name": {
+                              "kind": "var_name",
+                              "REGULAR_ID": "GET_HIGHS_LOWS"
+                            },
+                            "name_002": [
+                              {
+                                "kind": "name_001",
+                                "PERIOD": ".",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "YEAR_LOW"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "select_expr_000_002_001",
+                      "COMMA": ",",
+                      "select_column": {
+                        "kind": "select_column",
+                        "expr": {
+                          "kind": "expr",
+                          "expr": {
+                            "kind": "expr",
+                            "REPLACE": "REPLACE",
+                            "LEFT_PAREN": "(",
+                            "expr_cmlst": {
+                              "kind": "expr_cmlst",
+                              "expr": {
+                                "kind": "expr",
+                                "expr": {
+                                  "kind": "expr",
+                                  "aggregate_functions": {
+                                    "kind": "aggregate_functions",
+                                    "aggregate_functions_001": {
+                                      "kind": "aggregate_functions_001",
+                                      "MIN": "MIN"
+                                    },
+                                    "paren_col_lst": {
+                                      "kind": "paren_col_lst",
+                                      "LEFT_PAREN": "(",
+                                      "colname_list": {
+                                        "kind": "colname_list",
+                                        "colname": {
+                                          "kind": "colname",
+                                          "expr": {
+                                            "kind": "expr",
+                                            "name": {
+                                              "kind": "name",
+                                              "var_name": {
+                                                "kind": "var_name",
+                                                "REGULAR_ID": "LOW"
+                                              },
+                                              "name_002": [
+                                                {
+                                                  "kind": "name_001",
+                                                  "PERIOD": ".",
+                                                  "var_name": {
+                                                    "kind": "var_name",
+                                                    "REGULAR_ID": "DM_DATE"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "RIGHT_PAREN": ")"
+                                    }
+                                  }
+                                },
+                                "COLON": ":",
+                                "COLON_1": ":",
+                                "data_type": {
+                                  "kind": "data_type",
+                                  "string_binary": {
+                                    "kind": "string_binary",
+                                    "STRING": "STRING"
+                                  }
+                                }
+                              },
+                              "expr_cmlst_002": [
+                                {
+                                  "kind": "expr_cmlst_001",
+                                  "COMMA": ",",
+                                  "expr": {
+                                    "kind": "expr",
+                                    "constant": {
+                                      "kind": "constant",
+                                      "CHAR_STRING": "'-'"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "RIGHT_PAREN": ")"
+                          },
+                          "COLON": ":",
+                          "COLON_1": ":",
+                          "data_type": {
+                            "kind": "data_type",
+                            "numeric": {
+                              "kind": "numeric",
+                              "NUMBER": "NUMBER"
+                            }
+                          }
+                        },
+                        "select_column_002": {
+                          "kind": "select_column_002",
+                          "AS": "AS",
+                          "select_column_002_001": {
+                            "kind": "select_column_002_001",
+                            "REGULAR_ID": "EARLIEST_LOW_DATE"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "select_expr_000_008": {
+                  "kind": "select_expr_000_008",
+                  "FROM": "FROM",
+                  "objectReference": {
+                    "kind": "objectReference",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "GET_HIGHS_LOWS"
+                      }
+                    }
+                  },
+                  "select_expr_000_008_001": [
+                    {
+                      "kind": "joined_table_refs",
+                      "joined_table_refs_001": {
+                        "kind": "joined_table_refs_001",
+                        "INNER": "INNER"
+                      },
+                      "JOIN": "JOIN",
+                      "objectReference": {
+                        "kind": "objectReference",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "TPCDI_STG"
+                          },
+                          "name_002": [
+                            {
+                              "kind": "name_001",
+                              "PERIOD": ".",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "PUBLIC"
+                              }
+                            },
+                            {
+                              "kind": "name_001",
+                              "PERIOD": ".",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "DAILYMARKET_STG"
+                              }
+                            }
+                          ]
+                        },
+                        "objectReference_000_004": {
+                          "kind": "objectReference_000_004",
+                          "objectReference_000_004_001": {
+                            "kind": "objectReference_000_004_001",
+                            "REGULAR_ID": "HIGH"
+                          }
+                        }
+                      },
+                      "joined_table_refs_002": {
+                        "kind": "joined_table_refs_002",
+                        "ON": "ON",
+                        "expr": {
+                          "kind": "expr",
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "HIGH"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "DM_S_SYMB"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "expr_003_001": {
+                            "kind": "expr_003_001",
+                            "EQUALS_OP": "="
+                          },
+                          "expr_1": {
+                            "kind": "expr",
+                            "expr": {
+                              "kind": "expr",
+                              "name": {
+                                "kind": "name",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "GET_HIGHS_LOWS"
+                                },
+                                "name_002": [
+                                  {
+                                    "kind": "name_001",
+                                    "PERIOD": ".",
+                                    "var_name": {
+                                      "kind": "var_name",
+                                      "REGULAR_ID": "SYMBOL"
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            "expr_003_001": {
+                              "kind": "expr_003_001",
+                              "AND": "AND"
+                            },
+                            "expr_1": {
+                              "kind": "expr",
+                              "expr": {
+                                "kind": "expr",
+                                "name": {
+                                  "kind": "name",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "HIGH"
+                                  },
+                                  "name_002": [
+                                    {
+                                      "kind": "name_001",
+                                      "PERIOD": ".",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "DM_HIGH"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              "expr_003_001": {
+                                "kind": "expr_003_001",
+                                "EQUALS_OP": "="
+                              },
+                              "expr_1": {
+                                "kind": "expr",
+                                "name": {
+                                  "kind": "name",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "GET_HIGHS_LOWS"
+                                  },
+                                  "name_002": [
+                                    {
+                                      "kind": "name_001",
+                                      "PERIOD": ".",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "YEAR_HIGH"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "joined_table_refs",
+                      "joined_table_refs_001": {
+                        "kind": "joined_table_refs_001",
+                        "INNER": "INNER"
+                      },
+                      "JOIN": "JOIN",
+                      "objectReference": {
+                        "kind": "objectReference",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "TPCDI_STG"
+                          },
+                          "name_002": [
+                            {
+                              "kind": "name_001",
+                              "PERIOD": ".",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "PUBLIC"
+                              }
+                            },
+                            {
+                              "kind": "name_001",
+                              "PERIOD": ".",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "DAILYMARKET_STG"
+                              }
+                            }
+                          ]
+                        },
+                        "objectReference_000_004": {
+                          "kind": "objectReference_000_004",
+                          "objectReference_000_004_001": {
+                            "kind": "objectReference_000_004_001",
+                            "REGULAR_ID": "LOW"
+                          }
+                        }
+                      },
+                      "joined_table_refs_002": {
+                        "kind": "joined_table_refs_002",
+                        "ON": "ON",
+                        "expr": {
+                          "kind": "expr",
+                          "expr": {
+                            "kind": "expr",
+                            "name": {
+                              "kind": "name",
+                              "var_name": {
+                                "kind": "var_name",
+                                "REGULAR_ID": "LOW"
+                              },
+                              "name_002": [
+                                {
+                                  "kind": "name_001",
+                                  "PERIOD": ".",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "DM_S_SYMB"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "expr_003_001": {
+                            "kind": "expr_003_001",
+                            "EQUALS_OP": "="
+                          },
+                          "expr_1": {
+                            "kind": "expr",
+                            "expr": {
+                              "kind": "expr",
+                              "name": {
+                                "kind": "name",
+                                "var_name": {
+                                  "kind": "var_name",
+                                  "REGULAR_ID": "GET_HIGHS_LOWS"
+                                },
+                                "name_002": [
+                                  {
+                                    "kind": "name_001",
+                                    "PERIOD": ".",
+                                    "var_name": {
+                                      "kind": "var_name",
+                                      "REGULAR_ID": "SYMBOL"
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            "expr_003_001": {
+                              "kind": "expr_003_001",
+                              "AND": "AND"
+                            },
+                            "expr_1": {
+                              "kind": "expr",
+                              "expr": {
+                                "kind": "expr",
+                                "name": {
+                                  "kind": "name",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "LOW"
+                                  },
+                                  "name_002": [
+                                    {
+                                      "kind": "name_001",
+                                      "PERIOD": ".",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "DM_LOW"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              "expr_003_001": {
+                                "kind": "expr_003_001",
+                                "EQUALS_OP": "="
+                              },
+                              "expr_1": {
+                                "kind": "expr",
+                                "name": {
+                                  "kind": "name",
+                                  "var_name": {
+                                    "kind": "var_name",
+                                    "REGULAR_ID": "GET_HIGHS_LOWS"
+                                  },
+                                  "name_002": [
+                                    {
+                                      "kind": "name_001",
+                                      "PERIOD": ".",
+                                      "var_name": {
+                                        "kind": "var_name",
+                                        "REGULAR_ID": "YEAR_LOW"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "select_expr_000_008_005": {
+                    "kind": "select_expr_000_008_005",
+                    "GROUP": "GROUP",
+                    "BY": "BY",
+                    "select_expr_000_008_005_001": {
+                      "kind": "select_expr_000_008_005_001",
+                      "expr_cmlst": {
+                        "kind": "expr_cmlst",
+                        "expr": {
+                          "kind": "expr",
+                          "constant": {
+                            "kind": "constant",
+                            "signed_number": {
+                              "kind": "signed_number",
+                              "UNSIGNED_INTEGER": "1"
+                            }
+                          }
+                        },
+                        "expr_cmlst_002": [
+                          {
+                            "kind": "expr_cmlst_001",
+                            "COMMA": ",",
+                            "expr": {
+                              "kind": "expr",
+                              "constant": {
+                                "kind": "constant",
+                                "signed_number": {
+                                  "kind": "signed_number",
+                                  "UNSIGNED_INTEGER": "2"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "kind": "expr_cmlst_001",
+                            "COMMA": ",",
+                            "expr": {
+                              "kind": "expr",
+                              "constant": {
+                                "kind": "constant",
+                                "signed_number": {
+                                  "kind": "signed_number",
+                                  "UNSIGNED_INTEGER": "3"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "kind": "expr_cmlst_001",
+                            "COMMA": ",",
+                            "expr": {
+                              "kind": "expr",
+                              "constant": {
+                                "kind": "constant",
+                                "signed_number": {
+                                  "kind": "signed_number",
+                                  "UNSIGNED_INTEGER": "4"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "kind": "expr_cmlst_001",
+                            "COMMA": ",",
+                            "expr": {
+                              "kind": "expr",
+                              "constant": {
+                                "kind": "constant",
+                                "signed_number": {
+                                  "kind": "signed_number",
+                                  "UNSIGNED_INTEGER": "6"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "kind": "expr_cmlst_001",
+                            "COMMA": ",",
+                            "expr": {
+                              "kind": "expr",
+                              "constant": {
+                                "kind": "constant",
+                                "signed_number": {
+                                  "kind": "signed_number",
+                                  "UNSIGNED_INTEGER": "7"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "select_expr_000_008_008": {
+                    "kind": "select_expr_000_008_008",
+                    "ORDER": "ORDER",
+                    "BY": "BY",
+                    "order_by_elements_comma_list": {
+                      "kind": "order_by_elements_comma_list",
+                      "order_by_elements": {
+                        "kind": "order_by_elements",
+                        "expr": {
+                          "kind": "expr",
+                          "constant": {
+                            "kind": "constant",
+                            "signed_number": {
+                              "kind": "signed_number",
+                              "UNSIGNED_INTEGER": "1"
+                            }
+                          }
+                        }
+                      },
+                      "order_by_elements_comma_list_002": [
+                        {
+                          "kind": "order_by_elements_comma_list_001",
+                          "COMMA": ",",
+                          "order_by_elements": {
+                            "kind": "order_by_elements",
+                            "expr": {
+                              "kind": "expr",
+                              "constant": {
+                                "kind": "constant",
+                                "signed_number": {
+                                  "kind": "signed_number",
+                                  "UNSIGNED_INTEGER": "2"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      }
+    ]
+  },
+  "captures": []
+}

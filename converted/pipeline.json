@@ -1,0 +1,120 @@
+[
+   {
+    "kind": "create_pipeline",
+    "api": {
+      "api": "/api/2.0/pipelines",
+      "json": {
+        "name": "test_pipeline",
+        "continuous": false,
+        "clusters": [
+            {
+            "label": "default",
+            "autoscale": {
+                "min_workers": 1,
+                "max_workers": 5,
+                "mode": "ENHANCED"
+            }
+          }
+        ],
+        "libraries": [
+            {
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_trade_sp"}
+            },
+            {
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_trade_i_sp"}
+            },
+            {
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_trade_h_sp"}
+            },
+            {
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_trade_final_sp"}
+            },
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_watch_history_final"}
+            },
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_watch_history_i_sp"}
+            },
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_watch_history_h_sp"}
+            },
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_watch_history_sp"}
+            },
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_tradetype_sp"}
+            },
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_time_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_statustype_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_taxrate_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_prospect_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_industry_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_hr_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_hr_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_holding_history_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_holding_history_i_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_holding_history_h_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_holding_history_final_spi"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_date_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_dailymarket_final_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_dailymarket_h_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_dailymarket_i_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_dailymarket_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_account_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_cashtransaction_final_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_cashtransaction_h_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_cashtransaction_i_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_cashtransaction_sp"}
+            },    
+            {   
+                "notebook": {"path": "/Users/ted@novuz.com/tpc_di/tpcdi_stg_public_load_customer_sp"}
+            }
+        ],
+        "target": "tpcdi_main",
+        "photon": true,
+        "catalog": "h2db_catalog"
+        }
+    }
+  }
+]

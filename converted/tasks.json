@@ -1,0 +1,3334 @@
+[
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_account_i_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_account_i_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_account_i_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_account_i_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_cashtransaction_h_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/CashTransaction/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_cashtransaction_h_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/CashTransaction/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_cashtransaction_h_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/CashTransaction/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_cashtransaction_h_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/CashTransaction/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_cashtransaction_i_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_cashtransaction_i_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_cashtransaction_i_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_cashtransaction_i_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_customer_i_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_customer_i_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_customer_i_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch3/Customer/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_customer_i_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_customer_mgmt_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/CustomerMgmt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_customer_mgmt_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/CustomerMgmt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_customer_mgmt_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/CustomerMgmt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_customer_mgmt_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/CustomerMgmt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_dailymarket_h_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/DailyMarket/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_dailymarket_h_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/DailyMarket/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_dailymarket_h_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/DailyMarket/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_dailymarket_h_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/DailyMarket/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_dailymarket_i_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_dailymarket_i_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_dailymarket_i_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_dailymarket_i_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_date_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=i1000/Batch1/Date.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_date_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/Date.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_date_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/Date.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_date_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/Date.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_finwire_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_finwire_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_finwire_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_finwire_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_holding_history_h_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/HoldingHistory/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_holding_history_h_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/HoldingHistory/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_holding_history_h_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/HoldingHistory/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_holding_history_h_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/HoldingHistory/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_holding_history_i_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_holding_history_i_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_holding_history_i_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_holding_history_i_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_hr_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/HR/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_hr_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/HR/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_hr_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/HR/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_hr_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/HR/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_industry_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/Industry.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_industry_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/Industry.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_industry_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/Industry.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_industry_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/Industry.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_statustype_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/StatusType.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_statustype_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/StatusType.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_statustype_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/StatusType.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_statustype_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/StatusType.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_taxrate_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/TaxRate.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_taxrate_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/TaxRate.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_taxrate_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/TaxRate.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_taxrate_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/TaxRate.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_time_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/Time.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_time_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/Time.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_time_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/Time.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_time_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/Time.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_tradetype_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/TradeType.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_tradetype_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/TradeType.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_tradetype_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/TradeType.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_tradetype_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/TradeType.txt/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_trade_h_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_trade_h_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_trade_h_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_trade_h_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_trade_i_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_trade_i_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_trade_i_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_trade_i_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_watch_history_h_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch1/WatchHistory/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_watch_history_h_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/Batch1/WatchHistory/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_watch_history_h_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/Batch1/WatchHistory/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_watch_history_h_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/Batch1/WatchHistory/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_watch_history_i_1000_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=1000/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "1000"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_watch_history_i_100_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=100/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "100"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_watch_history_i_10_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=10/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "10"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kind": "create_or_replace_task",
+    "item": {
+      "db": "TPCDI_STG",
+      "schema": "PUBLIC",
+      "elem": "START_LOAD_INCREMENTAL_TASKS_SP",
+      "elem_type": "Task"
+    },
+    "api": {
+      "api": "/api/2.1/jobs/create",
+      "json": {
+        "name": "tpcdi_stg_public_load_watch_history_i_5_tsk",
+        "trigger": {
+          "pause_status": "UNPAUSED",
+          "file_arrival": {
+            "url": "s3://tpcdi-files/tmp/tpcdi/sf=5/"
+          }
+        },
+        "tasks": [
+          {
+            "task_key": "run_pipeline",
+            "run_if": "ALL_SUCCESS",
+            "pipeline_task": {
+              "pipeline_id": null,
+              "full_refresh": false
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scale",
+            "default": "5"
+          },
+          {
+            "name": "batches",
+            "default": "3"
+          },
+          {
+            "name": "wait",
+            "default": "60"
+          }
+        ]
+      }
+    }
+  }
+]

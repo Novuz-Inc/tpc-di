@@ -1,0 +1,14 @@
+resources:
+  pipelines:
+    pipeline_public_load_dailymarket_sp:
+      name: public_load_dailymarket_sp
+      clusters:
+        - label: default
+          num_workers: 1
+      libraries:
+        - notebook:
+            path: /Users/ted@novuz.com/tpc_di/public_load_dailymarket_sp
+      target: tpcdi_stg
+      development: true
+      catalog: h2db_catalog
+      data_sampling: false

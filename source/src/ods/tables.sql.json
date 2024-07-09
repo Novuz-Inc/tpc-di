@@ -1,0 +1,4778 @@
+{
+  "kind": "parse",
+  "sql_stmt_list": {
+    "kind": "sql_stmt_list",
+    "sql_stmt_list_002": [
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_database_stmt": {
+            "kind": "create_database_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "DATABASE": "DATABASE",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_schema_stmt": {
+            "kind": "create_schema_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "SCHEMA": "SCHEMA",
+            "table_name": {
+              "kind": "table_name",
+              "name": {
+                "kind": "name",
+                "var_name": {
+                  "kind": "var_name",
+                  "REGULAR_ID": "TPCDI_ODS"
+                },
+                "name_002": [
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "PUBLIC"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_table_stmt": {
+            "kind": "create_table_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TABLE": "TABLE",
+            "table_name": {
+              "kind": "table_name",
+              "name": {
+                "kind": "name",
+                "var_name": {
+                  "kind": "var_name",
+                  "REGULAR_ID": "TPCDI_ODS"
+                },
+                "name_002": [
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "PUBLIC"
+                    }
+                  },
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "ACCOUNT_ODS"
+                    }
+                  }
+                ]
+              }
+            },
+            "create_table_stmt_003": [
+              {
+                "kind": "create_table_options",
+                "create_table_property": {
+                  "kind": "create_table_property",
+                  "LEFT_PAREN": "(",
+                  "create_table_params": {
+                    "kind": "create_table_params",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "CA_ID"
+                      }
+                    },
+                    "data_type": {
+                      "kind": "data_type",
+                      "numeric": {
+                        "kind": "numeric",
+                        "INT": "INT"
+                      }
+                    },
+                    "create_table_params_001": [
+                      {
+                        "kind": "create_table_params_opt",
+                        "NOT": "NOT",
+                        "NULL": "NULL"
+                      },
+                      {
+                        "kind": "create_table_params_opt",
+                        "COMMENT": "COMMENT",
+                        "CHAR_STRING": "'CUSTOMER ACCOUNT IDENTIFIER'"
+                      }
+                    ]
+                  },
+                  "create_table_property_002": [
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CA_B_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "INT": "INT"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'IDENTIFIER OF THE MANAGING BROKER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CA_C_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "INT": "INT"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'OWNING CUSTOMER IDENTIFIER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CA_NAME"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "50",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'NAME OF CUSTOMER ACCOUNT'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CA_TAX_ST"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "INT": "INT"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'0, 1 OR 2 TAX STATUS OF THIS ACCOUNT'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CA_ST_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "4",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'ACTV OR INAC CUSTOMER STATUS TYPE IDENTIFIER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "LAST_UPDATED_TS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "TIMESTAMP_LTZ": "TIMESTAMP_LTZ"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'LAST TIME THIS RECORD WAS INSERTED OR UPDATED'"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "RIGHT_PAREN": ")"
+                }
+              }
+            ]
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_stream": {
+            "kind": "create_or_replace_stream",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "STREAM": "STREAM",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "ACCOUNT_ODS_STM"
+                  }
+                }
+              ]
+            },
+            "ON": "ON",
+            "create_or_replace_stream_003": {
+              "kind": "create_or_replace_stream_003",
+              "TABLE": "TABLE"
+            },
+            "name_1": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "ACCOUNT_ODS"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_table_stmt": {
+            "kind": "create_table_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TABLE": "TABLE",
+            "table_name": {
+              "kind": "table_name",
+              "name": {
+                "kind": "name",
+                "var_name": {
+                  "kind": "var_name",
+                  "REGULAR_ID": "TPCDI_ODS"
+                },
+                "name_002": [
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "PUBLIC"
+                    }
+                  },
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "CUSTOMER_ODS"
+                    }
+                  }
+                ]
+              }
+            },
+            "create_table_stmt_003": [
+              {
+                "kind": "create_table_options",
+                "create_table_property": {
+                  "kind": "create_table_property",
+                  "LEFT_PAREN": "(",
+                  "create_table_params": {
+                    "kind": "create_table_params",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "C_ID"
+                      }
+                    },
+                    "data_type": {
+                      "kind": "data_type",
+                      "numeric": {
+                        "kind": "numeric",
+                        "INT": "INT"
+                      }
+                    },
+                    "create_table_params_001": [
+                      {
+                        "kind": "create_table_params_opt",
+                        "NOT": "NOT",
+                        "NULL": "NULL"
+                      },
+                      {
+                        "kind": "create_table_params_opt",
+                        "COMMENT": "COMMENT",
+                        "CHAR_STRING": "'CUSTOMER IDENTIFIER'"
+                      }
+                    ]
+                  },
+                  "create_table_property_002": [
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_TAX_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "20",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CUSTOMER\u2019S TAX IDENTIFIER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_ST_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "4",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'ACTV OR INAC CUSTOMER STATUS TYPE IDENTIFIER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_L_NAME"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "25",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'PRIMARY CUSTOMER''S LAST NAME.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_F_NAME"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "20",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'PRIMARY CUSTOMER''S FIRST NAME.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_M_NAME"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "1",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'PRIMARY CUSTOMER''S MIDDLE INITIAL'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_GNDR"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "1",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'GENDER OF THE PRIMARY CUSTOMER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_TIER"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "1",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CUSTOMER TIER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_DOB"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "DATE": "DATE"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CUSTOMER\u2019S DATE OF BIRTH, AS YYYY-MM-DD.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_ADLINE1"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "80",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'ADDRESS LINE 1'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_ADLINE2"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "80",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'ADDRESS LINE 2'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_ZIPCODE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "12",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'ZIP OR POSTAL CODE'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_CITY"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "25",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CITY'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_STATE_PROV"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "20",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'STATE OR PROVINCE'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_CTRY"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "24",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'COUNTRY'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_CTRY_1"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "3",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'COUNTRY CODE FOR CUSTOMER''S PHONE 1.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_AREA_1"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "3",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'AREA CODE FOR CUSTOMER''S PHONE 1.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_LOCAL_1"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'LOCAL NUMBER FOR CUSTOMER''S PHONE 1.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_EXT_1"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "5",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'EXTENSION NUMBER FOR CUSTOMER''S PHONE 1.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_CTRY_2"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "3",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'COUNTRY CODE FOR CUSTOMER''S PHONE 2.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_AREA_2"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "3",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'AREA CODE FOR CUSTOMER''S PHONE 2.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_LOCAL_2"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'LOCAL NUMBER FOR CUSTOMER''S PHONE 2.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_EXT_2"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "5",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'EXTENSION NUMBER FOR CUSTOMER''S PHONE 2.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_CTRY_3"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "3",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'COUNTRY CODE FOR CUSTOMER''S PHONE 3.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_AREA_3"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "3",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'AREA CODE FOR CUSTOMER''S PHONE 3.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_LOCAL_3"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'LOCAL NUMBER FOR CUSTOMER''S PHONE 3.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_EXT_3"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "5",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'EXTENSION NUMBER FOR CUSTOMER''S PHONE 3.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_EMAIL_1"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "100",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CUSTOMER''S E-MAIL ADDRESS 1.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_EMAIL_2"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "100",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CUSTOMER''S E-MAIL ADDRESS 2.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_LCL_TX_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "4",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CUSTOMER''S LOCAL TAX RATE'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "C_NAT_TX_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "4",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CUSTOMER''S NATIONAL TAX RATE'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "LAST_UPDATED_TS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "TIMESTAMP_LTZ": "TIMESTAMP_LTZ"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'LAST TIME THIS RECORD WAS INSERTED OR UPDATED'"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "RIGHT_PAREN": ")"
+                }
+              }
+            ]
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_stream": {
+            "kind": "create_or_replace_stream",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "STREAM": "STREAM",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "CUSTOMER_ODS_STM"
+                  }
+                }
+              ]
+            },
+            "ON": "ON",
+            "create_or_replace_stream_003": {
+              "kind": "create_or_replace_stream_003",
+              "TABLE": "TABLE"
+            },
+            "name_1": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "CUSTOMER_ODS"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_table_stmt": {
+            "kind": "create_table_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TABLE": "TABLE",
+            "table_name": {
+              "kind": "table_name",
+              "name": {
+                "kind": "name",
+                "var_name": {
+                  "kind": "var_name",
+                  "REGULAR_ID": "TPCDI_ODS"
+                },
+                "name_002": [
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "PUBLIC"
+                    }
+                  },
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "FINWIRE_CMP_ODS"
+                    }
+                  }
+                ]
+              }
+            },
+            "create_table_stmt_003": [
+              {
+                "kind": "create_table_options",
+                "create_table_property": {
+                  "kind": "create_table_property",
+                  "LEFT_PAREN": "(",
+                  "create_table_params": {
+                    "kind": "create_table_params",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PTS"
+                      }
+                    },
+                    "data_type": {
+                      "kind": "data_type",
+                      "date_time": {
+                        "kind": "date_time",
+                        "TIMESTAMP_NTZ": "TIMESTAMP_NTZ"
+                      }
+                    },
+                    "create_table_params_001": [
+                      {
+                        "kind": "create_table_params_opt",
+                        "NOT": "NOT",
+                        "NULL": "NULL"
+                      },
+                      {
+                        "kind": "create_table_params_opt",
+                        "COMMENT": "COMMENT",
+                        "CHAR_STRING": "'POSTING DATE & TIME AS YYYYMMDD-HHMMSS'"
+                      }
+                    ]
+                  },
+                  "create_table_property_002": [
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "REC_TYPE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "3",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CMP'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "COMPANY_NAME"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "60",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'NAME OF THE COMPANY'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CIK"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'COMPANY IDENTIFICATION CODE FROM SEC'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "STATUS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "4",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'ACTV FOR ACTIVE COMPANY, INAC FOR INACTIVE'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "INDUSTRY_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "2",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CODE FOR INDUSTRY SEGMENT'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "SP_RATING"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "4",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'S&P RATING'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "FOUNDING_DATE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "DATE": "DATE"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'A DATE AS YYYYMMDD'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "ADDR_LINE1"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "80",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'MAILING ADDRESS'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "ADDR_LINE2"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "80",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'MAILING ADDRESS'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "POSTAL_CODE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "12",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'MAILING ADDRESS'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CITY"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "25",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'MAILING ADDRESS'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "STATE_PROVINCE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "20",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'MAILING ADDRESS'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "COUNTRY"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "24",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'MAILING ADDRESS'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CEO_NAME"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "46",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'NAME OF COMPANY CEO'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "DESCRIPTION"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "150",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'DESCRIPTION OF THE COMPANY'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "LAST_UPDATED_TS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "TIMESTAMP_LTZ": "TIMESTAMP_LTZ"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'LAST TIME THIS RECORD WAS INSERTED OR UPDATED'"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "RIGHT_PAREN": ")"
+                }
+              }
+            ]
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_stream": {
+            "kind": "create_or_replace_stream",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "STREAM": "STREAM",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FINWIRE_CMP_ODS_STM"
+                  }
+                }
+              ]
+            },
+            "ON": "ON",
+            "create_or_replace_stream_003": {
+              "kind": "create_or_replace_stream_003",
+              "TABLE": "TABLE"
+            },
+            "name_1": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FINWIRE_CMP_ODS"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_table_stmt": {
+            "kind": "create_table_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TABLE": "TABLE",
+            "table_name": {
+              "kind": "table_name",
+              "name": {
+                "kind": "name",
+                "var_name": {
+                  "kind": "var_name",
+                  "REGULAR_ID": "TPCDI_ODS"
+                },
+                "name_002": [
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "PUBLIC"
+                    }
+                  },
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "FINWIRE_FIN_ODS"
+                    }
+                  }
+                ]
+              }
+            },
+            "create_table_stmt_003": [
+              {
+                "kind": "create_table_options",
+                "create_table_property": {
+                  "kind": "create_table_property",
+                  "LEFT_PAREN": "(",
+                  "create_table_params": {
+                    "kind": "create_table_params",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PTS"
+                      }
+                    },
+                    "data_type": {
+                      "kind": "data_type",
+                      "date_time": {
+                        "kind": "date_time",
+                        "TIMESTAMP_NTZ": "TIMESTAMP_NTZ"
+                      }
+                    },
+                    "create_table_params_001": [
+                      {
+                        "kind": "create_table_params_opt",
+                        "NOT": "NOT",
+                        "NULL": "NULL"
+                      },
+                      {
+                        "kind": "create_table_params_opt",
+                        "COMMENT": "COMMENT",
+                        "CHAR_STRING": "'POSTING DATE & TIME AS YYYYMMDD-HHMMSS'"
+                      }
+                    ]
+                  },
+                  "create_table_property_002": [
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "REC_TYPE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "3",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'FIN'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "YEAR"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "4",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "0"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'YEAR OF THE QUARTER END'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "QUARTER"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "1",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "0"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'QUARTER NUMBER: VALID VALUES ARE 1, 2, 3, 4'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "QTR_START_DATE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "DATE": "DATE"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'START DATE OF QUARTER, AS YYYYMMDD'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "POSTING_DATE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "DATE": "DATE"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'POSTING DATE OF QUARTERLY REPORT AS YYYYMMDD'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "REVENUE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "15",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'REPORTED REVENUE FOR THE QUARTER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "EARNINGS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "15",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'NET EARNINGS REPORTED FOR THE QUARTER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "EPS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'BASIC EARNINGS PER SHARE FOR THE QUARTER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "DILUTED_EPS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'DILUTED EARNINGS PER SHARE FOR THE QUARTER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "MARGIN"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'PROFIT DIVIDED BY REVENUES FOR THE QUARTER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "INVENTORY"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "15",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'VALUE OF INVENTORY ON HAND AT END OF QUARTER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "ASSETS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "15",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'VALUE OF TOTAL ASSETS AT THE END OF QUARTER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "LIABILITIES"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "15",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'VALUE OF TOTAL LIABILITIES AT THE END OF QUARTER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "SH_OUT"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "13",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "0"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'AVERAGE NUMBER OF SHARES OUTSTANDING'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "DILUTED_SH_OUT"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "13",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "0"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'AVERAGE NUMBER OF SHARES OUTSTANDING (DILUTED)'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CO_NAME_OR_CIK"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "60",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'COMPANY CIK NUMBER (IF ONLY DIGITS, 10 VARCHARS) OR NAME (IF NOT ONLY DIGITS, 60 VARCHARS)'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "LAST_UPDATED_TS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "TIMESTAMP_LTZ": "TIMESTAMP_LTZ"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'LAST TIME THIS RECORD WAS INSERTED OR UPDATED'"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "RIGHT_PAREN": ")"
+                }
+              }
+            ]
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_stream": {
+            "kind": "create_or_replace_stream",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "STREAM": "STREAM",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FINWIRE_FIN_ODS_STM"
+                  }
+                }
+              ]
+            },
+            "ON": "ON",
+            "create_or_replace_stream_003": {
+              "kind": "create_or_replace_stream_003",
+              "TABLE": "TABLE"
+            },
+            "name_1": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FINWIRE_FIN_ODS"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_table_stmt": {
+            "kind": "create_table_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TABLE": "TABLE",
+            "table_name": {
+              "kind": "table_name",
+              "name": {
+                "kind": "name",
+                "var_name": {
+                  "kind": "var_name",
+                  "REGULAR_ID": "TPCDI_ODS"
+                },
+                "name_002": [
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "PUBLIC"
+                    }
+                  },
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "FINWIRE_SEC_ODS"
+                    }
+                  }
+                ]
+              }
+            },
+            "create_table_stmt_003": [
+              {
+                "kind": "create_table_options",
+                "create_table_property": {
+                  "kind": "create_table_property",
+                  "LEFT_PAREN": "(",
+                  "create_table_params": {
+                    "kind": "create_table_params",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "PTS"
+                      }
+                    },
+                    "data_type": {
+                      "kind": "data_type",
+                      "date_time": {
+                        "kind": "date_time",
+                        "TIMESTAMP_NTZ": "TIMESTAMP_NTZ"
+                      }
+                    },
+                    "create_table_params_001": [
+                      {
+                        "kind": "create_table_params_opt",
+                        "NOT": "NOT",
+                        "NULL": "NULL"
+                      },
+                      {
+                        "kind": "create_table_params_opt",
+                        "COMMENT": "COMMENT",
+                        "CHAR_STRING": "'POSTING DATE & TIME AS YYYYMMDD-HHMMSS'"
+                      }
+                    ]
+                  },
+                  "create_table_property_002": [
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "REC_TYPE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "3",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'\u201cSEC\u201d'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "SYMBOL"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "15",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'SECURITY SYMBOL'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "ISSUE_TYPE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "6",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'ISSUE TYPE'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "STATUS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "4",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'ACTV FOR ACTIVE SECURITY, INAC FOR INACTIVE'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "keywords": {
+                              "kind": "keywords",
+                              "NAME": "NAME"
+                            }
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "70",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'SECURITY NAME'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "EX_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "6",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'ID OF THE EXCHANGE THE SECURITY IS TRADED ON'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "SH_OUT"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "13",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "0"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'NUMBER OF SHARES OUTSTANDING'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "FIRST_TRADE_DATE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "DATE": "DATE"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'DATE OF FIRST TRADE AS YYYYMMDD'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "FIRST_TRADE_EXCHG"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "DATE": "DATE"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'DATE OF FIRST TRADE ON EXCHANGE AS YYYYMMDD'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "DIVIDEND"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'DIVIDEND AS VALUE_T'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "CO_NAME_OR_CIK"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "VARCHAR": "VARCHAR",
+                            "string_binary_000_001": {
+                              "kind": "string_binary_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "60",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'COMPANY CIK NUMBER (IF ONLY DIGITS, 10 CHARS) OR NAME (IF NOT ONLY DIGITS, 60 CHARS)'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "LAST_UPDATED_TS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "TIMESTAMP_LTZ": "TIMESTAMP_LTZ"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'LAST TIME THIS RECORD WAS INSERTED OR UPDATED'"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "RIGHT_PAREN": ")"
+                }
+              }
+            ]
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_stream": {
+            "kind": "create_or_replace_stream",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "STREAM": "STREAM",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FINWIRE_SEC_ODS_STM"
+                  }
+                }
+              ]
+            },
+            "ON": "ON",
+            "create_or_replace_stream_003": {
+              "kind": "create_or_replace_stream_003",
+              "TABLE": "TABLE"
+            },
+            "name_1": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "FINWIRE_SEC_ODS"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_table_stmt": {
+            "kind": "create_table_stmt",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "TABLE": "TABLE",
+            "table_name": {
+              "kind": "table_name",
+              "name": {
+                "kind": "name",
+                "var_name": {
+                  "kind": "var_name",
+                  "REGULAR_ID": "TPCDI_ODS"
+                },
+                "name_002": [
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "PUBLIC"
+                    }
+                  },
+                  {
+                    "kind": "name_001",
+                    "PERIOD": ".",
+                    "var_name": {
+                      "kind": "var_name",
+                      "REGULAR_ID": "TRADE_ODS"
+                    }
+                  }
+                ]
+              }
+            },
+            "create_table_stmt_003": [
+              {
+                "kind": "create_table_options",
+                "create_table_property": {
+                  "kind": "create_table_property",
+                  "LEFT_PAREN": "(",
+                  "create_table_params": {
+                    "kind": "create_table_params",
+                    "name": {
+                      "kind": "name",
+                      "var_name": {
+                        "kind": "var_name",
+                        "REGULAR_ID": "T_ID"
+                      }
+                    },
+                    "data_type": {
+                      "kind": "data_type",
+                      "numeric": {
+                        "kind": "numeric",
+                        "NUMBER": "NUMBER",
+                        "numeric_000_001": {
+                          "kind": "numeric_000_001",
+                          "LEFT_PAREN": "(",
+                          "UNSIGNED_INTEGER": "15",
+                          "RIGHT_PAREN": ")"
+                        }
+                      }
+                    },
+                    "create_table_params_001": [
+                      {
+                        "kind": "create_table_params_opt",
+                        "NOT": "NOT",
+                        "NULL": "NULL"
+                      },
+                      {
+                        "kind": "create_table_params_opt",
+                        "COMMENT": "COMMENT",
+                        "CHAR_STRING": "'TRADE IDENTIFIER.'"
+                      }
+                    ]
+                  },
+                  "create_table_property_002": [
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_DTS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "DATETIME": "DATETIME"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'DATE AND TIME OF TRADE.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_DT"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "DATE": "DATE"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'DATE OF TRADE.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_ST_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "4",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'STATUS TYPE IDENTIFIER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_TT_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "3",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'TRADE TYPE IDENTIFIER'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_IS_CASH"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "INT": "INT"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'IS THIS TRADE A CASH (1) OR MARGIN (0) TRADE?'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_S_SYMB"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "15",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'SECURITY SYMBOL OF THE SECURITY'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_QTY"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "6",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'QUANTITY OF SECURITIES TRADED.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_BID_PRICE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "8",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'THE REQUESTED UNIT PRICE.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_CA_ID"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "11",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'CUSTOMER ACCOUNT IDENTIFIER.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_EXEC_NAME"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "string_binary": {
+                            "kind": "string_binary",
+                            "CHAR": "CHAR",
+                            "string_binary_002_001": {
+                              "kind": "string_binary_002_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "49",
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'NAME OF THE PERSON EXECUTING THE TRADE.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_TRADE_PRICE"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "8",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'UNIT PRICE AT WHICH THE SECURITY WAS TRADED.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_CHRG"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'FEE CHARGED FOR PLACING THIS TRADE REQUEST.'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_COMM"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'COMMISSION EARNED ON THIS TRADE'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "T_TAX"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "numeric": {
+                            "kind": "numeric",
+                            "NUMBER": "NUMBER",
+                            "numeric_000_001": {
+                              "kind": "numeric_000_001",
+                              "LEFT_PAREN": "(",
+                              "UNSIGNED_INTEGER": "10",
+                              "numeric_000_001_001": {
+                                "kind": "numeric_000_001_001",
+                                "COMMA": ",",
+                                "UNSIGNED_INTEGER": "2"
+                              },
+                              "RIGHT_PAREN": ")"
+                            }
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'AMOUNT OF TAX DUE ON THIS TRADE'"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "kind": "create_table_property_001",
+                      "COMMA": ",",
+                      "create_table_params": {
+                        "kind": "create_table_params",
+                        "name": {
+                          "kind": "name",
+                          "var_name": {
+                            "kind": "var_name",
+                            "REGULAR_ID": "LAST_UPDATED_TS"
+                          }
+                        },
+                        "data_type": {
+                          "kind": "data_type",
+                          "date_time": {
+                            "kind": "date_time",
+                            "TIMESTAMP_LTZ": "TIMESTAMP_LTZ"
+                          }
+                        },
+                        "create_table_params_001": [
+                          {
+                            "kind": "create_table_params_opt",
+                            "NOT": "NOT",
+                            "NULL": "NULL"
+                          },
+                          {
+                            "kind": "create_table_params_opt",
+                            "COMMENT": "COMMENT",
+                            "CHAR_STRING": "'LAST TIME THIS RECORD WAS INSERTED OR UPDATED'"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "RIGHT_PAREN": ")"
+                }
+              }
+            ]
+          }
+        },
+        "SEMICOLON": ";"
+      },
+      {
+        "kind": "sql_stmt_list_001",
+        "sql_stmt": {
+          "kind": "sql_stmt",
+          "create_or_replace_stream": {
+            "kind": "create_or_replace_stream",
+            "create_replace": {
+              "kind": "create_replace",
+              "CREATE": "CREATE",
+              "create_replace_001": {
+                "kind": "create_replace_001",
+                "OR": "OR",
+                "REPLACE": "REPLACE"
+              }
+            },
+            "STREAM": "STREAM",
+            "name": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TRADE_ODS_STM"
+                  }
+                }
+              ]
+            },
+            "ON": "ON",
+            "create_or_replace_stream_003": {
+              "kind": "create_or_replace_stream_003",
+              "TABLE": "TABLE"
+            },
+            "name_1": {
+              "kind": "name",
+              "var_name": {
+                "kind": "var_name",
+                "REGULAR_ID": "TPCDI_ODS"
+              },
+              "name_002": [
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "PUBLIC"
+                  }
+                },
+                {
+                  "kind": "name_001",
+                  "PERIOD": ".",
+                  "var_name": {
+                    "kind": "var_name",
+                    "REGULAR_ID": "TRADE_ODS"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "SEMICOLON": ";"
+      }
+    ]
+  },
+  "captures": [
+    {
+      "line": 1,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- Create database/schema",
+      "prev": "",
+      "nxt": "-- Create database/schema"
+    },
+    {
+      "line": 6,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- CREATE TABLE STATEMENT",
+      "prev": "",
+      "nxt": "-- CREATE TABLE STATEMENT"
+    },
+    {
+      "line": 13,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- CREATE TABLE STATEMENT",
+      "prev": "",
+      "nxt": "-- CREATE TABLE STATEMENT"
+    },
+    {
+      "line": 20,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- CREATE TABLE STATEMENT",
+      "prev": "",
+      "nxt": "-- CREATE TABLE STATEMENT"
+    },
+    {
+      "line": 24,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- CREATE STREAM STATEMENT",
+      "prev": "",
+      "nxt": "-- CREATE STREAM STATEMENT"
+    },
+    {
+      "line": 28,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- CREATE TABLE STATEMENT",
+      "prev": "",
+      "nxt": "-- CREATE TABLE STATEMENT"
+    },
+    {
+      "line": 29,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- MOVED TO BEING A VIEW INSTEAD OF A TABLE",
+      "prev": "",
+      "nxt": "-- MOVED TO BEING A VIEW INSTEAD OF A TABLE"
+    },
+    {
+      "line": 33,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- CREATE STREAM STATEMENT",
+      "prev": "",
+      "nxt": "-- CREATE STREAM STATEMENT"
+    },
+    {
+      "line": 37,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- CREATE TABLE STATEMENT",
+      "prev": "",
+      "nxt": "-- CREATE TABLE STATEMENT"
+    },
+    {
+      "line": 38,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- MOVED TO BEING A VIEW INSTEAD OF A TABLE",
+      "prev": "",
+      "nxt": "-- MOVED TO BEING A VIEW INSTEAD OF A TABLE"
+    },
+    {
+      "line": 42,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- CREATE STREAM STATEMENT",
+      "prev": "",
+      "nxt": "-- CREATE STREAM STATEMENT"
+    },
+    {
+      "line": 46,
+      "pos": 0,
+      "pat": "(\\s*--).*$",
+      "kind": "slcomments",
+      "data": "-- CREATE TABLE STATEMENT",
+      "prev": "",
+      "nxt": "-- CREATE TABLE STATEMENT"
+    }
+  ]
+}
