@@ -34,8 +34,8 @@ as select
  _c18::string OWNORRENTFLAG, _c19::string EMPLOYER,
  _c20::DECIMAL(2) NUMBERCREDITCARDS, _c21::DECIMAL(12) NETWORTH
 from cloud_files(
-                 --"s3://tpcdi-files/tmp/tpcdi/sf=${tpcdi_scale}/Batch${file_counter}/Prospect",
-                 "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch2/Prospect",
+                 --"s3://tpcdi-files/tmp/tpcdi/sf=${tpcdi_scale}/Batch[2-3]/Prospect",
+                 "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch[2-3]/Prospect",
                  "csv",
                  map("inferSchema", "False", 
                      

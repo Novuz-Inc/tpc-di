@@ -11,8 +11,8 @@ as select
  _c0::string CDC_FLAG, _c1::DECIMAL(12) CDC_DSN, _c2::DECIMAL(11) W_C_ID,
  _c3::string W_S_SYMB, _c4::TIMESTAMP W_DTS, _c5::string W_ACTION
 from cloud_files(
-                 --"s3://tpcdi-files/tmp/tpcdi/sf=${tpcdi_scale}/Batch${batch_counter}/WatchHistory",
-                 "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch2/WatchHistory",
+                 --"s3://tpcdi-files/tmp/tpcdi/sf=${tpcdi_scale}/Batch[2-3]/WatchHistory",
+                 "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch[2-3]/WatchHistory",
                  "csv",
                  map("inferSchema", "False", 
                      

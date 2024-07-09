@@ -25,8 +25,8 @@ as select
  _c11::string T_EXEC_NAME, _c12::DECIMAL(8, 2) T_TRADE_PRICE,
  _c13::DECIMAL(10, 2) T_CHRG, _c14::DECIMAL(10, 2) T_COMM, _c15::DECIMAL(10,2) T_TAX
 from cloud_files(
-                 --"s3://tpcdi-files/tmp/tpcdi/sf=${tpcdi_scale}/Batch${batch_counter}/Trade",
-                 "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch2/Trade",
+                 --"s3://tpcdi-files/tmp/tpcdi/sf=${tpcdi_scale}/Batch[2-3]/Trade",
+                 "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch[2-3]/Trade",
                  "csv",
                  map("inferSchema", "False", 
                      

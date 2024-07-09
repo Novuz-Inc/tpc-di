@@ -1,4 +1,5 @@
 -- Databricks notebook source
+-- Has an automation defect. Will be updated after the fix
 create or refresh streaming live table public_finwire_stg
 (PTS STRING NOT NULL COMMENT 'POSTING DATE & TIME AS YYYYMMDD-HHMMSS - FIN, CMP, SEC', 
  REC_TYPE STRING NOT NULL COMMENT '“FIN”, "CMP", OR "SEC" - FIN, CMP, SEC', 

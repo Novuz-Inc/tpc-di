@@ -9,8 +9,8 @@ as select
  _c3::DECIMAL(15) HH_T_ID, _c4::DECIMAL(6) HH_BEFORE_QTY,
  _c5::DECIMAL(6) HH_AFTER_QTY
 from cloud_files(
-                 ---"s3://tpcdi-files/tmp/tpcdi/sf=${tpcdi_scale}/Batch${batch_counter}/HoldingHistory",
-                 "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch[1-3]/HoldingHistory",
+                 ---"s3://tpcdi-files/tmp/tpcdi/sf=${tpcdi_scale}/Batch[2-3]/HoldingHistory",
+                 "s3://tpcdi-files/tmp/tpcdi/sf=1000/Batch[2-3]/HoldingHistory",
                  "csv",
                  map("inferSchema", "False", 
                      
