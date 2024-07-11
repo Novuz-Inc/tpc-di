@@ -1,7 +1,8 @@
 **Structure of the code:**
 1. source: Original Snowflake code
-2. converted: Converted DAG came out of Novuz automation
-3. deployed: Code deployed to Databricks
+2. parsed: Parsed source code data came out of Novuz parser
+3. converted: Converted DAG came out of Novuz automation
+4. deployed: Code deployed to Databricks
 
 **Approach:**
 1. Converted to Delta Live Table (DLT) framework, due to complex dependencies on Snowflake side. DLT handles all dependencies through lineage, so no explicit dependency needed to be added.
